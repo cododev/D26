@@ -1,0 +1,12 @@
+[23-Dec-2025 18:49:30 UTC] [2025-12-23 18:49:30] Exception: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in C:\Users\codoj\Downloads\deedix25\config\database.php on line 27
+Trace:
+#0 C:\Users\codoj\Downloads\deedix25\src\Bootstrap.php(98): require()
+#1 C:\Users\codoj\Downloads\deedix25\src\Bootstrap.php(29): DeediX\Bootstrap::loadConfig()
+#2 C:\Users\codoj\Downloads\deedix25\public\api\v1\index.php(20): DeediX\Bootstrap::init()
+#3 {main}
+[23-Dec-2025 18:49:30 UTC] [2025-12-23 18:49:30] Exception: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in C:\Users\codoj\Downloads\deedix25\config\database.php on line 27
+Trace:
+#0 C:\Users\codoj\Downloads\deedix25\src\Bootstrap.php(98): require()
+#1 C:\Users\codoj\Downloads\deedix25\src\Bootstrap.php(29): DeediX\Bootstrap::loadConfig()
+#2 C:\Users\codoj\Downloads\deedix25\public\api\v1\index.php(20): DeediX\Bootstrap::init()
+#3 {main}

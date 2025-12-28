@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeediX Shop - Premium Tech Products</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0078d4">
+    <meta name="theme-color" content="#0078d4">
+
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/user-menu.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="shop-logo-text">
+                    <span class="shop-logo-brand">DEEDIX</span>
+                    <span class="shop-logo-tagline">SHOP</span>
+                </a>
+
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="active">All Products</a>
+                    <a href="smartphones.html">Smartphones</a>
+                    <a href="laptops.html">Laptops</a>
+                    <a href="gaming.html">Gaming</a>
+                    <a href="accessories.html">Accessories</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search products...">
+                        <button id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="user-menu">
+                        <a href="login.html" id="authBtn" class="btn-auth">
+                            <i class="fas fa-user"></i> Sign In
+                        </a>
+                        <div id="userDropdown" class="dropdown" style="display: none;">
+                            <span id="userName"></span>
+                            <button id="logoutBtn">Logout</button>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount" class="hidden"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Banner Slider -->
+        <section class="hero-banner">
+            <div class="hero-slider">
+                <!-- Slide 1: Smartphones -->
+                <div class="hero-slide active" data-slide="1">
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Latest iPhone & Samsung</h1>
+                                <p class="hero-subtitle">Experience cutting-edge technology with flagship smartphones from Apple and Samsung</p>
+                                <div class="hero-cta">
+                                    <a href="smartphones.html" class="btn-hero btn-hero-primary">Explore Smartphones</a>
+                                    <a href="#products" class="btn-hero btn-hero-secondary">Shop All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-background"></div>
+                </div>
+
+                <!-- Slide 2: Laptops -->
+                <div class="hero-slide" data-slide="2">
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Premium Laptops</h1>
+                                <p class="hero-subtitle">Power your productivity with top-tier laptops from leading brands</p>
+                                <div class="hero-cta">
+                                    <a href="laptops.html" class="btn-hero btn-hero-primary">Explore Laptops</a>
+                                    <a href="#products" class="btn-hero btn-hero-secondary">Shop All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-background"></div>
+                </div>
+
+                <!-- Slide 3: Gaming -->
+                <div class="hero-slide" data-slide="3">
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <h1 class="hero-title">PS5 & Xbox Gaming</h1>
+                                <p class="hero-subtitle">Next-gen gaming consoles and accessories for the ultimate gaming experience</p>
+                                <div class="hero-cta">
+                                    <a href="gaming.html" class="btn-hero btn-hero-primary">Explore Gaming</a>
+                                    <a href="#products" class="btn-hero btn-hero-secondary">Shop All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-background"></div>
+                </div>
+
+                <!-- Slide 4: Accessories -->
+                <div class="hero-slide" data-slide="4">
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Premium Accessories</h1>
+                                <p class="hero-subtitle">Earbuds, headphones, and more to complete your tech collection</p>
+                                <div class="hero-cta">
+                                    <a href="accessories.html" class="btn-hero btn-hero-primary">Explore Accessories</a>
+                                    <a href="#products" class="btn-hero btn-hero-secondary">Shop All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-background"></div>
+                </div>
+            </div>
+
+            <!-- Slider Indicators -->
+            <div class="hero-indicators">
+                <button class="hero-indicator active" data-slide="1" aria-label="Go to slide 1"></button>
+                <button class="hero-indicator" data-slide="2" aria-label="Go to slide 2"></button>
+                <button class="hero-indicator" data-slide="3" aria-label="Go to slide 3"></button>
+                <button class="hero-indicator" data-slide="4" aria-label="Go to slide 4"></button>
+            </div>
+        </section>
+
+        <!-- Category Showcase -->
+        <section class="category-showcase">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="category-grid">
+                    <a href="smartphones.html" class="category-card">
+                        <div class="category-image">
+                            <img src="assets/media/shop-smartphone.jpg" alt="Smartphones" class="category-img">
+                        </div>
+                        <div class="category-info">
+                            <h3>Smartphones</h3>
+                            <p>Latest devices from top brands</p>
+                        </div>
+                    </a>
+
+                    <a href="laptops.html" class="category-card">
+                        <div class="category-image">
+                            <img src="assets/media/shop-laptop.webp" alt="Laptops & Computers" class="category-img">
+                        </div>
+                        <div class="category-info">
+                            <h3>Laptops & Computers</h3>
+                            <p>Power for work and play</p>
+                        </div>
+                    </a>
+
+                    <a href="gaming.html" class="category-card">
+                        <div class="category-image">
+                            <img src="assets/media/shop-gaming.webp" alt="Gaming" class="category-img">
+                        </div>
+                        <div class="category-info">
+                            <h3>Gaming</h3>
+                            <p>Consoles, PCs, and accessories</p>
+                        </div>
+                    </a>
+
+                    <a href="accessories.html" class="category-card">
+                        <div class="category-image">
+                            <img src="assets/media/shop-accessories.jpg" alt="Accessories" class="category-img">
+                        </div>
+                        <div class="category-info">
+                            <h3>Accessories</h3>
+                            <p>Airpods, FireTV, Speakers, Cases & More</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Filters -->
+            <section id="products" class="filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="featured">Featured</button>
+                <button class="filter-btn" data-filter="popular">Popular</button>
+                <button class="filter-btn" data-filter="new">New Arrivals</button>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="products-section">
+                <h1>All Products</h1>
+                <div id="loading" class="loading">Loading products...</div>
+                <div id="productsGrid" class="products-grid"></div>
+                <div id="pagination" class="pagination"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Trust Badges -->
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <i class="fas fa-truck" aria-hidden="true"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>Free Shipping</h4>
+                    <p>On orders over ₦200,000</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>Secure Payment</h4>
+                    <p>100% secure transactions</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>Quality Guarantee</h4>
+                    <p>Warranty on all products</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <i class="fas fa-headset" aria-hidden="true"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>24/7 Support</h4>
+                    <p>Always here to help</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="index.html" class="shop-logo-text">
+                        <span class="shop-logo-brand">DEEDIX</span>
+                        <span class="shop-logo-tagline">SHOP</span>
+                    </a>
+                    <p class="footer-text">
+                        Your trusted destination for premium tech products. We offer brand new and quality used electronics with warranty and excellent customer service.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">All Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refunds.html">Refund Policy</a></li>
+                        <li><a href="terms-condition.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> DeediX Technologies. All rights reserved.</p>
+                <div class="footer-payment-icons">
+                    <span class="payment-label">We accept:</span>
+                    <img src="assets/svg/visa.svg" alt="Visa" class="payment-svg" />
+                    <img src="assets/svg/mastercard.svg" alt="Mastercard" class="payment-svg" />
+                    <img src="assets/svg/bank.png" alt="Bank Transfer" class="payment-svg" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/api-client.js"></script>
+    <script src="assets/js/mobile-nav.js"></script>
+    <script src="assets/js/shop.js"></script>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348074387880?text=Hi%20DeediX%20Shop!%20I'm%20interested%20in%20your%20products.%20Can%20you%20help%20me?"
+            class="whatsapp-bubble"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <div class="whatsapp-status"></div>
+        </a>
+        <div class="whatsapp-tooltip">
+            <strong>24/7 Support via WhatsApp</strong><br>
+            <span style="font-size:13px;">We typically reply within minutes<br>
+            (8:00 – 18:00 daily • After hours: within 2 hours)</span>
+        </div>
+    </div>
+    <script src="assets/js/user-auth.js"></script>
+</body>
+</html>

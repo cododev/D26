@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Background elements -->
+
+  <!-- Stopwatch/Clock icon -->
+  <g transform="translate(680, 140)">
+    <circle cx="0" cy="0" r="30" fill="#0078d4" opacity="0.2"/>
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#0078d4" stroke-width="3"/>
+    <line x1="0" y1="0" x2="0" y2="-15" stroke="#0078d4" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="12" y2="0" stroke="#0078d4" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="-3" y="-35" width="6" height="8" rx="2" fill="#0078d4"/>
+  </g>
+
+  <!-- Message bubble icon -->
+  <g transform="translate(520, 280)">
+    <rect x="0" y="0" width="80" height="50" rx="12" fill="#0078d4"/>
+    <circle cx="20" cy="25" r="4" fill="white"/>
+    <circle cx="40" cy="25" r="4" fill="white"/>
+    <circle cx="60" cy="25" r="4" fill="white"/>
+  </g>
+
+  <!-- Email icon -->
+  <g transform="translate(750, 180)">
+    <rect x="0" y="0" width="45" height="35" rx="5" fill="#0078d4" opacity="0.3"/>
+    <path d="M 0 0 L 22.5 20 L 45 0" stroke="#0078d4" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+    <path d="M 8 -8 L 15 -8" stroke="#0078d4" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tools/Settings icon -->
+  <g transform="translate(750, 280)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#ff8c00" stroke-width="3"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#ff8c00" stroke-width="2.5"/>
+    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#ff8c00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="18" x2="0" y2="22" stroke="#ff8c00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-22" y1="0" x2="-18" y2="0" stroke="#ff8c00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="18" y1="0" x2="22" y2="0" stroke="#ff8c00" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Decorative elements -->
+  <g transform="translate(600, 250)">
+    <path d="M 0 0 L -8 -15 L 8 -15 Z" fill="#ff8c00"/>
+  </g>
+
+  <g transform="translate(620, 320)">
+    <path d="M 0 -10 L 5 0 L 0 10 L -5 0 Z" fill="#0078d4" opacity="0.4"/>
+  </g>
+
+  <g transform="translate(730, 240)">
+    <line x1="0" y1="0" x2="15" y2="-15" stroke="#005a9e" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="15" y2="15" stroke="#005a9e" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Question mark -->
+  <g transform="translate(600, 350)">
+    <path d="M 0 -100 Q 80 -100 80 -30 Q 80 20 20 40 L 20 60"
+          fill="none" stroke="#005a9e" stroke-width="45" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="20" cy="90" r="22" fill="#005a9e"/>
+  </g>
+
+  <!-- Person 1 (left) -->
+  <g transform="translate(200, 350)">
+    <!-- Head -->
+    <ellipse cx="0" cy="-30" rx="25" ry="28" fill="#8B4513"/>
+    <!-- Body -->
+    <path d="M -20 0 Q -20 -10 -15 -5 L -15 50 Q -15 80 -25 110 L 25 110 Q 15 80 15 50 L 15 -5 Q 20 -10 20 0 Z" fill="#4a90a4"/>
+    <!-- Arm -->
+    <path d="M 15 0 Q 35 20 45 40" stroke="#4a90a4" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <ellipse cx="50" cy="45" rx="10" ry="12" fill="#f4c2a2"/>
+  </g>
+
+  <!-- Person 2 (middle) -->
+  <g transform="translate(350, 340)">
+    <!-- Head -->
+    <circle cx="0" cy="-30" r="28" fill="#f4c2a2"/>
+    <!-- Body -->
+    <path d="M -22 0 Q -22 -10 -17 -5 L -17 50 Q -17 80 -27 120 L 27 120 Q 17 80 17 50 L 17 -5 Q 22 -10 22 0 Z" fill="#ff8c00"/>
+    <!-- Arms raised -->
+    <path d="M -17 5 Q -40 -20 -50 -40" stroke="#ff8c00" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M 17 5 Q 40 -20 50 -40" stroke="#ff8c00" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-55" cy="-45" rx="10" ry="12" fill="#f4c2a2"/>
+    <ellipse cx="55" cy="-45" rx="10" ry="12" fill="#f4c2a2"/>
+  </g>
+
+  <!-- Person 3 (right) -->
+  <g transform="translate(500, 350)">
+    <!-- Head -->
+    <circle cx="0" cy="-30" r="26" fill="#f4c2a2"/>
+    <!-- Body -->
+    <path d="M -20 0 Q -20 -10 -15 -5 L -15 50 Q -15 80 -25 110 L 25 110 Q 15 80 15 50 L 15 -5 Q 20 -10 20 0 Z" fill="#4a90a4"/>
+    <!-- Arm -->
+    <path d="M -15 0 Q -35 20 -45 40" stroke="#4a90a4" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <ellipse cx="-50" cy="45" rx="10" ry="12" fill="#f4c2a2"/>
+  </g>
+
+  <!-- Ground line -->
+  <line x1="120" y1="460" x2="780" y2="460" stroke="#0078d4" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,398 @@
+/* ============================================
+   People Page Styles - DeediX Technologies
+   Following Microsoft/Apple/AWS Design Principles
+   ============================================ */
+
+/* People Page Header - White Background */
+.people-page .page-header {
+    background: #ffffff;
+}
+
+/* Team Stats Section */
+.team-stats {
+    padding: 3rem 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon i {
+    font-size: 1.75rem;
+    color: #0078d4;
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-content .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1;
+    display: inline-block;
+}
+
+.stat-content .stat-plus {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0078d4;
+    margin-left: 0.125rem;
+}
+
+.stat-content .stat-label {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 0.375rem;
+    display: block;
+}
+
+/* Team Section */
+.team-section {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.team-section-alt {
+    background: #ffffff;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 1rem 0;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.team-grid-4 {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* Team Member Card */
+.team-member {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.member-image {
+    position: relative;
+    height: 280px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.member-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 120, 212, 0.3);
+}
+
+.member-avatar i {
+    font-size: 4rem;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.member-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 120, 212, 0.95) 0%, rgba(0, 90, 158, 0.95) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover .member-overlay {
+    opacity: 1;
+}
+
+.member-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.member-social a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.member-social a:hover {
+    background: #ffffff;
+    color: #0078d4;
+    transform: scale(1.1);
+}
+
+.member-info {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+}
+
+.member-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 0.5rem 0;
+}
+
+.member-role {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #0078d4;
+    margin: 0 0 1rem 0;
+}
+
+.member-bio {
+    font-size: 0.9375rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Join CTA Section */
+.join-cta {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.join-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.join-text {
+    flex: 1;
+}
+
+.join-text h2 {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 0.75rem 0;
+}
+
+.join-text p {
+    font-size: 1.125rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.join-action {
+    flex-shrink: 0;
+}
+
+.join-action .btn {
+    min-width: 220px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .people-page .page-header {
+        margin-top: 70px;  /* Add clearance for fixed navbar */
+    }
+
+    .team-stats {
+        padding: 2rem 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .stat-card {
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stat-icon i {
+        font-size: 1.5rem;
+    }
+
+    .stat-content .stat-number,
+    .stat-content .stat-plus {
+        font-size: 1.75rem;
+    }
+
+    .team-section {
+        padding: 3rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .team-grid-4 {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    .member-image {
+        height: 240px;
+    }
+
+    .member-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .member-avatar i {
+        font-size: 3.5rem;
+    }
+
+    .member-info {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .join-cta {
+        padding: 3rem 0;
+    }
+
+    .join-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .join-action .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Keep stats horizontal (2 columns) to save vertical space */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    /* Stack team members in 2 columns to save scrolling */
+    .team-grid,
+    .team-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .member-info {
+        padding: 0.75rem;
+    }
+
+    .member-name {
+        font-size: 0.9375rem;
+    }
+
+    .member-role {
+        font-size: 0.75rem;
+    }
+
+    .member-social {
+        gap: 0.75rem;
+    }
+
+    .member-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}

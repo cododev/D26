@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign In - DeediX Shop</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favisons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg">
+    <link rel="mask-icon" href="../assets/favicons/safari-pinned-tab.svg" color="#0078d4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f7;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .admin-login-container {
+            max-width: 540px;
+            width: 100%;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Page Header */
+        .admin-page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .admin-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #1d1d1f;
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 20px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .admin-badge i {
+            font-size: 0.875rem;
+        }
+
+        .admin-page-title {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .admin-page-subtitle {
+            font-size: 1.125rem;
+            color: #86868b;
+            font-weight: 400;
+        }
+
+        /* Card */
+        .admin-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            animation: fadeIn 0.6s ease-out 0.2s backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Form */
+        .admin-form .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .admin-form label {
+            display: block;
+            font-weight: 400;
+            color: #1d1d1f;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .admin-form input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #d2d2d7;
+            border-radius: 12px;
+            font-size: 1.0625rem;
+            transition: all 0.2s ease;
+            background: #fbfbfd;
+            color: #1d1d1f;
+        }
+
+        .admin-form input::placeholder {
+            color: #86868b;
+        }
+
+        .admin-form input:hover {
+            border-color: #a1a1a6;
+        }
+
+        .admin-form input:focus {
+            outline: none;
+            border-color: #0071e3;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(0, 125, 250, 0.1);
+        }
+
+        /* Submit Button */
+        .admin-form button[type="submit"] {
+            width: 100%;
+            padding: 1rem 3.5rem 1rem 1rem;
+            background: #0071e3;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.0625rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+
+        .admin-form button[type="submit"]:hover {
+            background: #0077ed;
+        }
+
+        .admin-form button[type="submit"]:active {
+            transform: scale(0.98);
+        }
+
+        .admin-form button[type="submit"]:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-submit-arrow {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .admin-form button[type="submit"]:hover .btn-submit-arrow {
+            background: rgba(0, 0, 0, 0.08);
+            transform: translateY(-50%) translateX(2px);
+        }
+
+        /* Error Message */
+        .error-message {
+            background: #fff3f3;
+            color: #dc2626;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            display: none;
+            border-left: 4px solid #dc2626;
+            animation: slideIn 0.3s ease;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        .admin-footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+        }
+
+        .admin-footer a {
+            color: #0071e3;
+            text-decoration: none;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            transition: all 0.2s ease;
+        }
+
+        .admin-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Security Notice */
+        .security-notice {
+            background: #f9fafb;
+            border: 1px solid #d2d2d7;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.8125rem;
+            color: #6e6e73;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .security-notice i {
+            color: #0071e3;
+            margin-top: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .admin-page-title {
+                font-size: 2rem;
+            }
+
+            .admin-card {
+                padding: 2rem 1.5rem;
+            }
+
+            body {
+                padding: 1rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="admin-login-container">
+        <!-- Page Header -->
+        <div class="admin-page-header">
+            <div class="admin-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Administrator Access</span>
+            </div>
+            <h1 class="admin-page-title">Sign in to Admin</h1>
+            <p class="admin-page-subtitle">DeediX Shop Management</p>
+        </div>
+
+        <!-- Login Card -->
+        <div class="admin-card">
+            <div class="error-message" id="errorMessage"></div>
+
+            <form class="admin-form" id="adminLoginForm">
+                <div class="form-group">
+                    <label for="username">Admin Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="admin@deedixtech.com"
+                        required
+                        autofocus
+                        autocomplete="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="••••••••••••"
+                        required
+                        autocomplete="current-password">
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    Sign In
+                    <span class="btn-submit-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </button>
+            </form>
+
+            <div class="security-notice">
+                <i class="fas fa-lock"></i>
+                <div>
+                    <strong>Secure Access</strong><br>
+                    This area is restricted to authorized administrators only. All login attempts are monitored and logged.
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="admin-footer">
+            <a href="../index.html">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Shop
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('adminLoginForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const errorMessage = document.getElementById('errorMessage');
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.classList.add('show');
+            setTimeout(() => {
+                errorMessage.classList.remove('show');
+            }, 5000);
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Signing in...<span class="btn-submit-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>';
+
+            try {
+                const response = await fetch('/api/v1/admin/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    localStorage.setItem('token', data.data.token);
+                    submitBtn.innerHTML = 'Success! Redirecting...<span class="btn-submit-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>';
+                    setTimeout(() => {
+                        window.location.href = 'admin-dashboard.html';
+                    }, 500);
+                } else {
+                    showError(data.message || 'Invalid credentials. Please check your username and password.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Sign In<span class="btn-submit-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>';
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                showError('Unable to connect to server. Please check your connection and try again.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Sign In<span class="btn-submit-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>';
+            }
+        });
+
+        // Check if already logged in
+        if (localStorage.getItem('token')) {
+            fetch('/api/v1/admin/check', {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && data.data.authenticated) {
+                    window.location.href = 'admin-dashboard.html';
+                } else {
+                    localStorage.removeItem('token');
+                }
+            })
+            .catch(() => {
+                localStorage.removeItem('token');
+            });
+        }
+    </script>
+</body>
+</html>

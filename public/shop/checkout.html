@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - DeediX Shop</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0078d4">
+    <meta name="theme-color" content="#0078d4">
+
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/user-menu.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="shop-logo-text">
+                    <span class="shop-logo-brand">DEEDIX</span>
+                    <span class="shop-logo-tagline">SHOP</span>
+                </a>
+
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main checkout-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Secure Checkout</h1>
+                <div class="checkout-steps">
+                    <div class="step active"><span class="step-number">1</span> Shipping</div>
+                    <div class="step"><span class="step-number">2</span> Payment</div>
+                    <div class="step"><span class="step-number">3</span> Review</div>
+                </div>
+            </div>
+
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <section class="checkout-form-section">
+                    <form id="checkoutForm">
+                        <!-- Shipping Information -->
+                        <div class="form-section">
+                            <h2>Shipping Information</h2>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name <span class="required">*</span></label>
+                                    <input type="text" id="firstName" name="first_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name <span class="required">*</span></label>
+                                    <input type="text" id="lastName" name="last_name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+234 801 234 5678">
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="address">Street Address <span class="required">*</span></label>
+                                <input type="text" id="address" name="address" required placeholder="House number, street name">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City / Town <span class="required">*</span></label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State <span class="required">*</span></label>
+                                    <select id="state" name="state" required>
+                                        <option value="">Select your state</option>
+                                        <!-- Full Nigerian states list -->
+                                        <option value="Abia">Abia</option>
+                                        <option value="Adamawa">Adamawa</option>
+                                        <option value="Akwa Ibom">Akwa Ibom</option>
+                                        <option value="Anambra">Anambra</option>
+                                        <option value="Bauchi">Bauchi</option>
+                                        <option value="Bayelsa">Bayelsa</option>
+                                        <option value="Benue">Benue</option>
+                                        <option value="Borno">Borno</option>
+                                        <option value="Cross River">Cross River</option>
+                                        <option value="Delta">Delta</option>
+                                        <option value="Ebonyi">Ebonyi</option>
+                                        <option value="Edo">Edo</option>
+                                        <option value="Ekiti">Ekiti</option>
+                                        <option value="Enugu">Enugu</option>
+                                        <option value="FCT">FCT (Abuja)</option>
+                                        <option value="Gombe">Gombe</option>
+                                        <option value="Imo">Imo</option>
+                                        <option value="Jigawa">Jigawa</option>
+                                        <option value="Kaduna">Kaduna</option>
+                                        <option value="Kano">Kano</option>
+                                        <option value="Katsina">Katsina</option>
+                                        <option value="Kebbi">Kebbi</option>
+                                        <option value="Kogi">Kogi</option>
+                                        <option value="Kwara">Kwara</option>
+                                        <option value="Lagos">Lagos</option>
+                                        <option value="Nasarawa">Nasarawa</option>
+                                        <option value="Niger">Niger</option>
+                                        <option value="Ogun">Ogun</option>
+                                        <option value="Ondo">Ondo</option>
+                                        <option value="Osun">Osun</option>
+                                        <option value="Oyo">Oyo</option>
+                                        <option value="Plateau">Plateau</option>
+                                        <option value="Rivers">Rivers</option>
+                                        <option value="Sokoto">Sokoto</option>
+                                        <option value="Taraba">Taraba</option>
+                                        <option value="Yobe">Yobe</option>
+                                        <option value="Zamfara">Zamfara</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="notes">Order Notes (Optional)</label>
+                                <textarea id="notes" name="notes" rows="4" placeholder="E.g., Deliver between 9 AM - 5 PM, call before delivery, etc."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="form-section">
+                            <h2>Payment Method</h2>
+
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment_method" value="card" checked>
+                                    <div class="payment-card">
+                                        <i class="fas fa-credit-card payment-icon"></i>
+                                        <div>
+                                            <strong>Pay with Card</strong>
+                                            <p>Secure payment via Paystack (Visa, Mastercard, Verve)</p>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <label class="payment-option">
+                                    <input type="radio" name="payment_method" value="bank_transfer">
+                                    <div class="payment-card">
+                                        <i class="fas fa-university payment-icon"></i>
+                                        <div>
+                                            <strong>Bank Transfer</strong>
+                                            <p>Transfer to our account and upload proof of payment</p>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <label class="payment-option">
+                                    <input type="radio" name="payment_method" value="cash">
+                                    <div class="payment-card">
+                                        <i class="fas fa-money-bill-wave payment-icon"></i>
+                                        <div>
+                                            <strong>Cash on Delivery</strong>
+                                            <p>Pay with cash when you receive your order</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- Bank Transfer Details (shown when bank transfer is selected) -->
+                            <div id="bankTransferDetails" class="bank-transfer-details" style="display: none;">
+                                <div class="bank-info-card">
+                                    <h4><i class="fas fa-university"></i> Bank Account Details</h4>
+                                    <div class="bank-detail-item">
+                                        <strong>Bank Name:</strong>
+                                        <span>GT Bank (Guaranty Trust Bank)</span>
+                                    </div>
+                                    <div class="bank-detail-item">
+                                        <strong>Account Name:</strong>
+                                        <span>DeediX Technologies Limited</span>
+                                    </div>
+                                    <div class="bank-detail-item">
+                                        <strong>Account Number:</strong>
+                                        <span class="account-number">0123456789</span>
+                                        <button type="button" class="copy-btn" onclick="copyAccountNumber()">
+                                            <i class="fas fa-copy"></i> Copy
+                                        </button>
+                                    </div>
+                                    <div class="bank-note">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span>After payment, please send proof (screenshot/receipt) to <strong>shop@deedixtech.com</strong> or WhatsApp: <strong>+234 807 438-7880</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="cart.html" class="btn btn-secondary">← Back to Cart</a>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <span id="placeOrderText">Place Order</span>
+                                <span id="processingText" style="display:none;">Processing...</span>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Order Summary Sidebar -->
+                <aside class="order-summary-sidebar">
+                    <div class="order-summary sticky">
+                        <h3>Order Summary</h3>
+                        <div id="orderItems" class="order-items"></div>
+
+                        <hr>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₦0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shipping">₦5,000</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Estimated VAT (7.5%)</span>
+                            <span id="tax">₦0</span>
+                        </div>
+
+                        <hr class="thick">
+
+                        <div class="summary-row total">
+                            <strong>Total</strong>
+                            <strong id="total">₦0</strong>
+                        </div>
+
+                        <div class="trust-badges">
+                            <p><i class="fas fa-lock"></i> Secure checkout</p>
+                            <p><i class="fas fa-shield-alt"></i> Money-back guarantee</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> DeediX Technologies. All rights reserved.</p>
+                <div class="payment-icons">
+                    <span class="payment-label">We accept:</span>
+                    <svg class="payment-svg"><use href="assets/svg/payment-icons.svg#visa-icon"></use></svg>
+                    <svg class="payment-svg"><use href="assets/svg/payment-icons.svg#mastercard-icon"></use></svg>
+                    <svg class="payment-svg"><use href="assets/svg/payment-icons.svg#verve-icon"></use></svg>
+                    <svg class="payment-svg"><use href="assets/svg/payment-icons.svg#bank-icon"></use></svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Support -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348074387880?text=Hi!%20I'm%20at%20checkout%20and%20need%20help%20with%20my%20order."
+           class="whatsapp-bubble" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            <div class="whatsapp-status"></div>
+        </a>
+        <div class="whatsapp-tooltip">
+            <strong>Need Help?</strong><br>Chat with us on WhatsApp
+        </div>
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Payment Gateway Scripts -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <!-- Stripe.js (uncomment when ready to use) -->
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
+
+    <script src="assets/js/api-client.js"></script>
+    <script src="assets/js/payment-gateway.js"></script>
+    <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/user-auth.js"></script>
+</body>
+</html>

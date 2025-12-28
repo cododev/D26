@@ -1,0 +1,866 @@
+/**
+ * DeediX Technologies - Training Page Styles
+ */
+
+/* ========================================
+   Page-Level Navbar Integration
+======================================== */
+.trainings-page .navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.trainings-page .navbar.scrolled {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================
+   Hero Section - Responsive Layout
+======================================== */
+.training-hero {
+    background: #ffffff;
+    padding: 6rem 0 3rem;
+    position: relative;
+}
+
+.training-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+}
+
+.training-hero-text {
+    text-align: left;
+}
+
+.training-hero-title {
+    font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: #1e293b;
+}
+
+.training-hero-subtitle {
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: #64748b;
+    font-weight: 400;
+}
+
+.training-hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.training-hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.training-hero-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 50%, #f0f9ff 100%);
+    border-radius: 16px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.training-hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.training-hero-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-icon-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.08);
+    transition: all 0.3s ease;
+}
+
+.hero-icon-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 120, 212, 0.15);
+}
+
+.hero-icon-item i {
+    font-size: 2rem;
+    color: #0078d4;
+}
+
+.hero-icon-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #475569;
+    text-align: center;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #0078d4;
+    color: #0078d4;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #0078d4;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.2);
+}
+
+/* ========================================
+   Filter Section
+======================================== */
+.training-filter {
+    background: #f8f9fa;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.filter-toolbar {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-select:hover {
+    border-color: #0078d4;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #0078d4;
+    box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.1);
+}
+
+/* ========================================
+   Section Headers (Modern Style)
+======================================== */
+.section-header-modern {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title-modern {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle-modern {
+    font-size: 1.125rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   Training Paths Section
+======================================== */
+.training-paths {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.learning-path-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.learning-path-card:hover {
+    border-color: #0078d4;
+    box-shadow: 0 8px 24px rgba(0, 120, 212, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Featured Card */
+.learning-path-card.featured-card {
+    border: 2px solid #0078d4;
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+}
+
+.featured-banner {
+    background: linear-gradient(135deg, #0078d4 0%, #1e3a8a 100%);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.featured-banner i {
+    font-size: 0.875rem;
+}
+
+/* Card Header */
+.learning-path-header {
+    padding: 2rem 2rem 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.learning-path-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0078d4 0%, #1e3a8a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.75rem;
+}
+
+.learning-path-badge {
+    display: flex;
+}
+
+.badge {
+    padding: 0.375rem 0.875rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-beginner {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.badge-intermediate {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-advanced {
+    background: #fce7f3;
+    color: #9f1239;
+}
+
+/* Card Body */
+.learning-path-body {
+    padding: 0 2rem 2rem;
+    flex: 1;
+}
+
+.learning-path-title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.learning-path-description {
+    font-size: 0.9375rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.learning-path-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.meta-item i {
+    font-size: 1rem;
+    color: #0078d4;
+}
+
+.learning-path-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.topic-pill {
+    padding: 0.375rem 0.875rem;
+    background: #f1f5f9;
+    border-radius: 16px;
+    font-size: 0.8125rem;
+    color: #475569;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.topic-pill:hover {
+    background: #e0f2fe;
+    color: #0078d4;
+}
+
+/* Card Footer */
+.learning-path-footer {
+    padding: 1.5rem 2rem;
+    background: #f8f9fa;
+    border-top: 1px solid #e5e7eb;
+}
+
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0078d4;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-link:hover {
+    color: #005a9e;
+    gap: 0.75rem;
+}
+
+.btn-link i {
+    font-size: 0.875rem;
+    transition: transform 0.2s ease;
+}
+
+.btn-link:hover i {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   Benefits Section
+======================================== */
+.training-benefits {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    border-color: #0078d4;
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.08);
+    transform: translateY(-4px);
+}
+
+.benefit-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-icon i {
+    font-size: 1.75rem;
+    color: #0078d4;
+}
+
+.benefit-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+.benefit-description {
+    font-size: 0.9375rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* ========================================
+   CTA Section - Responsive Layout
+======================================== */
+.training-cta {
+    background: #f8f9fa;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.cta-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+}
+
+.cta-text-content {
+    text-align: left;
+}
+
+.cta-title-large {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+    color: #1e293b;
+}
+
+.cta-subtitle-large {
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: #64748b;
+}
+
+.cta-actions-large {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-visual-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.cta-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.cta-stat-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.cta-stat-card:hover {
+    border-color: #0078d4;
+    box-shadow: 0 8px 24px rgba(0, 120, 212, 0.12);
+    transform: translateY(-4px);
+}
+
+.cta-stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0078d4;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.cta-stat-label {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.btn-outline-white {
+    background: transparent;
+    border: 2px solid #0078d4;
+    color: #0078d4;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-white:hover {
+    background: #0078d4;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 120, 212, 0.2);
+}
+
+/* ========================================
+   Footer Integration
+======================================== */
+.trainings-page .footer {
+    background: #1e293b;
+    color: #e2e8f0;
+    border-top: none;
+}
+
+.trainings-page .footer-title {
+    color: #ffffff;
+}
+
+.trainings-page .footer-text,
+.trainings-page .footer-links a,
+.trainings-page .footer-contact li {
+    color: #cbd5e1;
+}
+
+.trainings-page .footer-links a:hover {
+    color: #0078d4;
+}
+
+.trainings-page .social-link {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trainings-page .social-link:hover {
+    background: #0078d4;
+    border-color: #0078d4;
+}
+
+.trainings-page .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+}
+
+/* ========================================
+   Button Enhancements
+======================================== */
+.btn i {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover i {
+    transform: translateX(4px);
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+}
+
+/* ========================================
+   Responsive Design
+======================================== */
+@media (max-width: 1024px) {
+    .training-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .training-hero {
+        padding: 3rem 0 2rem;
+        margin-top: 70px;  /* Add clearance for fixed navbar */
+    }
+
+    .training-hero-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Visual comes first, then text, then actions */
+    .training-hero-visual {
+        order: 1;
+        min-height: 300px;
+    }
+
+    .training-hero-text {
+        order: 2;
+        text-align: center;
+    }
+
+    .training-hero-actions {
+        order: 3;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .training-hero-image {
+        padding: 2rem;
+    }
+
+    .training-hero-icons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .hero-icon-item {
+        padding: 1rem;
+    }
+
+    .hero-icon-item i {
+        font-size: 1.5rem;
+    }
+
+    .hero-icon-label {
+        font-size: 0.75rem;
+    }
+
+    .training-filter {
+        padding: 1.5rem 0;
+    }
+
+    .filter-toolbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .filter-group {
+        min-width: 100%;
+    }
+
+    .training-paths {
+        padding: 3rem 0;
+    }
+
+    .training-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .learning-path-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+
+    .learning-path-body {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .learning-path-footer {
+        padding: 1rem 1.5rem;
+    }
+
+    .learning-path-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+
+    .learning-path-title {
+        font-size: 1.25rem;
+    }
+
+    .learning-path-meta {
+        gap: 1rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+        padding: 1.5rem;
+    }
+
+    .training-cta {
+        padding: 3rem 0;
+    }
+
+    .cta-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .cta-text-content {
+        text-align: center;
+    }
+
+    .cta-actions-large {
+        justify-content: center;
+    }
+
+    .cta-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .cta-stat-card {
+        padding: 1.5rem;
+    }
+
+    .cta-stat-number {
+        font-size: 2rem;
+    }
+
+    .btn-lg {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .training-hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .training-hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-modern {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle-modern {
+        font-size: 1rem;
+    }
+
+    .learning-path-title {
+        font-size: 1.125rem;
+    }
+
+    .learning-path-description {
+        font-size: 0.875rem;
+    }
+
+    .benefit-title {
+        font-size: 1.125rem;
+    }
+
+    .benefit-description {
+        font-size: 0.875rem;
+    }
+}
+
+/* ========================================
+   Animations
+======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.learning-path-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.learning-path-card:nth-child(1) { animation-delay: 0.05s; }
+.learning-path-card:nth-child(2) { animation-delay: 0.1s; }
+.learning-path-card:nth-child(3) { animation-delay: 0.15s; }
+.learning-path-card:nth-child(4) { animation-delay: 0.2s; }
+.learning-path-card:nth-child(5) { animation-delay: 0.25s; }
+.learning-path-card:nth-child(6) { animation-delay: 0.3s; }
+.learning-path-card:nth-child(7) { animation-delay: 0.35s; }
+.learning-path-card:nth-child(8) { animation-delay: 0.4s; }
+.learning-path-card:nth-child(9) { animation-delay: 0.45s; }
+
+/* ========================================
+   Print Styles
+======================================== */
+@media print {
+    .training-hero,
+    .training-filter,
+    .training-cta,
+    .whatsapp-float,
+    .back-to-top,
+    nav,
+    footer {
+        display: none;
+    }
+
+    .learning-path-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}

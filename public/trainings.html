@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DeediX Technologies Training Programs - Professional IT Training, Networking, Cloud Computing, Cybersecurity Certifications">
+    <meta name="keywords" content="IT Training, CCNA, CCNP, AWS Training, Cybersecurity, Cloud Computing, Technical Training Nigeria">
+    <meta name="author" content="Davison Isesele">
+
+    <title>Training Programs | DeediX Technologies</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/main-site/img/favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0078d4">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/main-site/css/modern-style.css">
+    <link rel="stylesheet" href="assets/main-site/css/animations.css">
+    <link rel="stylesheet" href="assets/main-site/css/pages.css">
+    <link rel="stylesheet" href="assets/main-site/css/trainings.css">
+    <link rel="stylesheet" href="assets/main-site/css/chatbot.css">
+</head>
+<body class="trainings-page">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-text">
+                <span class="logo-brand">DEEDIX</span>
+                <span class="logo-tagline">TECHNOLOGIES</span>
+            </a>
+
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="people.html" class="nav-link">Our People</a></li>
+                <li><a href="service.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="trainings.html" class="nav-link active">Trainings</a></li>
+                <li><a href="shop/index.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link btn-primary">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="training-hero">
+        <div class="container">
+            <div class="training-hero-content">
+                <div class="training-hero-text">
+                    <h1 class="training-hero-title">Build your technical skills</h1>
+                    <p class="training-hero-subtitle">
+                        Whether you're just starting or are already a professional, our hands-on approach helps you
+                        arrive at your goals faster, with more confidence and at your own pace.
+                    </p>
+                    <div class="training-hero-actions">
+                        <a href="#browse-trainings" class="btn btn-primary btn-lg">
+                            Browse all training paths
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">
+                            Get started
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="training-hero-visual">
+                    <div class="training-hero-image">
+                        <div class="training-hero-icons">
+                            <div class="hero-icon-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span class="hero-icon-label">Expert-Led</span>
+                            </div>
+                            <div class="hero-icon-item">
+                                <i class="fas fa-certificate"></i>
+                                <span class="hero-icon-label">Certified</span>
+                            </div>
+                            <div class="hero-icon-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <span class="hero-icon-label">Hands-On</span>
+                            </div>
+                            <div class="hero-icon-item">
+                                <i class="fas fa-users"></i>
+                                <span class="hero-icon-label">Community</span>
+                            </div>
+                            <div class="hero-icon-item">
+                                <i class="fas fa-clock"></i>
+                                <span class="hero-icon-label">Flexible</span>
+                            </div>
+                            <div class="hero-icon-item">
+                                <i class="fas fa-infinity"></i>
+                                <span class="hero-icon-label">Lifetime Access</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="training-filter">
+        <div class="container">
+            <div class="filter-toolbar">
+                <div class="filter-group">
+                    <label for="roleFilter">Role</label>
+                    <select id="roleFilter" class="filter-select">
+                        <option value="all">All Roles</option>
+                        <option value="developer">Developer</option>
+                        <option value="administrator">Administrator</option>
+                        <option value="security">Security Professional</option>
+                        <option value="architect">Solution Architect</option>
+                        <option value="manager">IT Manager</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="levelFilter">Level</label>
+                    <select id="levelFilter" class="filter-select">
+                        <option value="all">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="productFilter">Product</label>
+                    <select id="productFilter" class="filter-select">
+                        <option value="all">All Products</option>
+                        <option value="aws">AWS</option>
+                        <option value="azure">Azure</option>
+                        <option value="cisco">Cisco</option>
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Paths Section -->
+    <section class="training-paths" id="browse-trainings">
+        <div class="container">
+            <div class="section-header-modern">
+                <h2 class="section-title-modern">Learning paths</h2>
+                <p class="section-subtitle-modern">
+                    Guided learning paths to help you build skills for your role
+                </p>
+            </div>
+
+            <div class="training-grid">
+                <!-- Networking Path -->
+                <article class="learning-path-card" data-role="administrator" data-level="beginner">
+                    <div class="learning-path-header">
+                        <div class="learning-path-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="learning-path-badge">
+                            <span class="badge badge-beginner">Beginner</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-body">
+                        <h3 class="learning-path-title">Networking Fundamentals & Certifications</h3>
+                        <p class="learning-path-description">
+                            Master networking concepts from fundamentals to advanced enterprise solutions.
+                            Prepare for industry-recognized Cisco certifications (CCNA, CCNP).
+                        </p>
+                        <div class="learning-path-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>8-12 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>CCNA/CCNP Prep</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>8 Modules</span>
+                            </div>
+                        </div>
+                        <div class="learning-path-topics">
+                            <span class="topic-pill">Network Fundamentals</span>
+                            <span class="topic-pill">Routing & Switching</span>
+                            <span class="topic-pill">VLAN Configuration</span>
+                            <span class="topic-pill">TCP/IP Protocol</span>
+                            <span class="topic-pill">Network Security</span>
+                            <span class="topic-pill">Wireless Networks</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-footer">
+                        <a href="contact.html" class="btn-link">
+                            Start learning path
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Cloud Computing Path -->
+                <article class="learning-path-card" data-role="architect" data-level="intermediate">
+                    <div class="learning-path-header">
+                        <div class="learning-path-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="learning-path-badge">
+                            <span class="badge badge-intermediate">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-body">
+                        <h3 class="learning-path-title">Cloud Computing (AWS, Azure, GCP)</h3>
+                        <p class="learning-path-description">
+                            Design, deploy, and manage cloud infrastructure across major platforms.
+                            Get hands-on experience with real-world cloud projects and certifications.
+                        </p>
+                        <div class="learning-path-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6-10 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Cloud Certified</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>10 Modules</span>
+                            </div>
+                        </div>
+                        <div class="learning-path-topics">
+                            <span class="topic-pill">AWS Services</span>
+                            <span class="topic-pill">Azure Administration</span>
+                            <span class="topic-pill">GCP Fundamentals</span>
+                            <span class="topic-pill">Cloud Architecture</span>
+                            <span class="topic-pill">DevOps in Cloud</span>
+                            <span class="topic-pill">Cloud Security</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-footer">
+                        <a href="contact.html" class="btn-link">
+                            Start learning path
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Cybersecurity Path -->
+                <article class="learning-path-card" data-role="security" data-level="intermediate">
+                    <div class="learning-path-header">
+                        <div class="learning-path-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="learning-path-badge">
+                            <span class="badge badge-intermediate">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-body">
+                        <h3 class="learning-path-title">Cybersecurity & Ethical Hacking</h3>
+                        <p class="learning-path-description">
+                            Become a cybersecurity professional with comprehensive training covering penetration testing,
+                            ethical hacking, and security operations. CEH and Security+ preparation.
+                        </p>
+                        <div class="learning-path-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>8-14 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>CEH/Security+</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>12 Modules</span>
+                            </div>
+                        </div>
+                        <div class="learning-path-topics">
+                            <span class="topic-pill">Ethical Hacking</span>
+                            <span class="topic-pill">Penetration Testing</span>
+                            <span class="topic-pill">Network Security</span>
+                            <span class="topic-pill">Vulnerability Assessment</span>
+                            <span class="topic-pill">Security Operations</span>
+                            <span class="topic-pill">Incident Response</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-footer">
+                        <a href="contact.html" class="btn-link">
+                            Start learning path
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Web Development Path -->
+                <article class="learning-path-card" data-role="developer" data-level="beginner">
+                    <div class="learning-path-header">
+                        <div class="learning-path-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="learning-path-badge">
+                            <span class="badge badge-beginner">Beginner</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-body">
+                        <h3 class="learning-path-title">Full-Stack Web Development</h3>
+                        <p class="learning-path-description">
+                            Learn modern programming languages and frameworks to build professional web applications.
+                            From frontend to backend, databases to deployment.
+                        </p>
+                        <div class="learning-path-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>10-16 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Certificate</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>14 Modules</span>
+                            </div>
+                        </div>
+                        <div class="learning-path-topics">
+                            <span class="topic-pill">HTML/CSS/JavaScript</span>
+                            <span class="topic-pill">React/Vue</span>
+                            <span class="topic-pill">Node.js</span>
+                            <span class="topic-pill">Python/Django</span>
+                            <span class="topic-pill">Database Design</span>
+                            <span class="topic-pill">API Development</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-footer">
+                        <a href="contact.html" class="btn-link">
+                            Start learning path
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Python Programming Path -->
+                <article class="learning-path-card" data-role="developer" data-level="beginner">
+                    <div class="learning-path-header">
+                        <div class="learning-path-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="learning-path-badge">
+                            <span class="badge badge-beginner">Beginner</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-body">
+                        <h3 class="learning-path-title">Python Programming & Data Science</h3>
+                        <p class="learning-path-description">
+                            Master Python programming from basics to advanced applications including data science,
+                            machine learning, automation, and web development with Django.
+                        </p>
+                        <div class="learning-path-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>8-12 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Certificate</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>10 Modules</span>
+                            </div>
+                        </div>
+                        <div class="learning-path-topics">
+                            <span class="topic-pill">Python Basics</span>
+                            <span class="topic-pill">Data Structures</span>
+                            <span class="topic-pill">Django Framework</span>
+                            <span class="topic-pill">NumPy & Pandas</span>
+                            <span class="topic-pill">Machine Learning</span>
+                            <span class="topic-pill">Automation</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-footer">
+                        <a href="contact.html" class="btn-link">
+                            Start learning path
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project Management Path -->
+                <article class="learning-path-card" data-role="manager" data-level="intermediate">
+                    <div class="learning-path-header">
+                        <div class="learning-path-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="learning-path-badge">
+                            <span class="badge badge-intermediate">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-body">
+                        <h3 class="learning-path-title">IT Project Management</h3>
+                        <p class="learning-path-description">
+                            Master the art of managing IT projects using industry-standard methodologies.
+                            Learn Agile, Scrum, and traditional project management to lead successful initiatives.
+                        </p>
+                        <div class="learning-path-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6-8 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>PMP/Agile</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>8 Modules</span>
+                            </div>
+                        </div>
+                        <div class="learning-path-topics">
+                            <span class="topic-pill">Project Planning</span>
+                            <span class="topic-pill">Agile & Scrum</span>
+                            <span class="topic-pill">Risk Management</span>
+                            <span class="topic-pill">Team Leadership</span>
+                            <span class="topic-pill">Budgeting</span>
+                            <span class="topic-pill">Stakeholder Management</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-footer">
+                        <a href="contact.html" class="btn-link">
+                            Start learning path
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- DevOps Path -->
+                <article class="learning-path-card" data-role="developer" data-level="advanced">
+                    <div class="learning-path-header">
+                        <div class="learning-path-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <div class="learning-path-badge">
+                            <span class="badge badge-advanced">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-body">
+                        <h3 class="learning-path-title">DevOps Engineering</h3>
+                        <p class="learning-path-description">
+                            Learn DevOps practices, CI/CD pipelines, containerization, and infrastructure as code.
+                            Master tools like Docker, Kubernetes, Jenkins, and Terraform.
+                        </p>
+                        <div class="learning-path-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>10-14 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>DevOps Certified</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>12 Modules</span>
+                            </div>
+                        </div>
+                        <div class="learning-path-topics">
+                            <span class="topic-pill">CI/CD Pipelines</span>
+                            <span class="topic-pill">Docker</span>
+                            <span class="topic-pill">Kubernetes</span>
+                            <span class="topic-pill">Terraform</span>
+                            <span class="topic-pill">Jenkins</span>
+                            <span class="topic-pill">Monitoring</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-footer">
+                        <a href="contact.html" class="btn-link">
+                            Start learning path
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Data Analytics Path -->
+                <article class="learning-path-card" data-role="developer" data-level="intermediate">
+                    <div class="learning-path-header">
+                        <div class="learning-path-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="learning-path-badge">
+                            <span class="badge badge-intermediate">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-body">
+                        <h3 class="learning-path-title">Data Analytics & Visualization</h3>
+                        <p class="learning-path-description">
+                            Transform data into insights with comprehensive training in data analytics,
+                            visualization, and business intelligence tools including Power BI and Tableau.
+                        </p>
+                        <div class="learning-path-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>8-10 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Certificate</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>9 Modules</span>
+                            </div>
+                        </div>
+                        <div class="learning-path-topics">
+                            <span class="topic-pill">SQL & Databases</span>
+                            <span class="topic-pill">Power BI</span>
+                            <span class="topic-pill">Tableau</span>
+                            <span class="topic-pill">Excel Advanced</span>
+                            <span class="topic-pill">Data Modeling</span>
+                            <span class="topic-pill">Statistics</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-footer">
+                        <a href="contact.html" class="btn-link">
+                            Start learning path
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Corporate Training -->
+                <article class="learning-path-card featured-card" data-role="all" data-level="all">
+                    <div class="featured-banner">
+                        <i class="fas fa-star"></i>
+                        <span>Custom Training</span>
+                    </div>
+                    <div class="learning-path-header">
+                        <div class="learning-path-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                    </div>
+                    <div class="learning-path-body">
+                        <h3 class="learning-path-title">Corporate & Team Training</h3>
+                        <p class="learning-path-description">
+                            Tailored training programs designed specifically for your organization's needs.
+                            We identify skill gaps and deliver targeted training that improves team performance.
+                        </p>
+                        <div class="learning-path-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Flexible Duration</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Team Training</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-cog"></i>
+                                <span>Customized</span>
+                            </div>
+                        </div>
+                        <div class="learning-path-topics">
+                            <span class="topic-pill">On-site Training</span>
+                            <span class="topic-pill">Virtual Sessions</span>
+                            <span class="topic-pill">Custom Curriculum</span>
+                            <span class="topic-pill">Flexible Scheduling</span>
+                            <span class="topic-pill">Team Building</span>
+                            <span class="topic-pill">Progress Tracking</span>
+                        </div>
+                    </div>
+                    <div class="learning-path-footer">
+                        <a href="contact.html" class="btn-link">
+                            Request consultation
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="training-benefits">
+        <div class="container">
+            <div class="section-header-modern">
+                <h2 class="section-title-modern">Why learn with us</h2>
+                <p class="section-subtitle-modern">
+                    Industry-leading training that delivers real results
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="benefit-title">Expert instructors</h3>
+                    <p class="benefit-description">
+                        Learn from certified professionals with years of industry experience and passion for teaching.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="benefit-title">Hands-on labs</h3>
+                    <p class="benefit-description">
+                        Gain practical experience with real-world scenarios, lab exercises, and project-based learning.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="benefit-title">Flexible learning</h3>
+                    <p class="benefit-description">
+                        Choose from weekday, weekend, or online classes that fit your schedule and learning style.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="benefit-title">Certification support</h3>
+                    <p class="benefit-description">
+                        Comprehensive exam preparation and support to help you achieve industry certifications.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="benefit-title">Career guidance</h3>
+                    <p class="benefit-description">
+                        Receive career advice, resume support, and job placement assistance after completion.
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3 class="benefit-title">Lifetime access</h3>
+                    <p class="benefit-description">
+                        Get lifetime access to course materials, updates, and ongoing support from our community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Partners Section -->
+    <section class="technology-partners" id="tech-partners">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Train on Industry-Standard Platforms <i class="fa fa-laptop-code" aria-hidden="true"></i></h2>
+                <p class="section-subtitle">Hands-on experience with real-world enterprise technology</p>
+            </div>
+
+            <div class="partners-content">
+                <!-- Left: Compact Logo Bubbles -->
+                <div class="partners-bubbles">
+                    <div class="partners-grid">
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/aws.svg" alt="AWS">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/azure.svg" alt="Microsoft Azure">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/google-cloud.svg" alt="Google Cloud">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/oracle.svg" alt="Oracle">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/sap.svg" alt="SAP">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/adobe.svg" alt="Adobe">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/cisco.svg" alt="Cisco">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/comptia.svg" alt="Comptia">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Description -->
+                <div class="partners-text">
+                    <h3 class="partners-heading">Real-World Technology Training</h3>
+                    <p class="partners-description">
+                        Our training programs are built around the same enterprise platforms used by Fortune 500 companies
+                        worldwide. Gain hands-on experience with AWS, Azure, Oracle, Cisco, and other industry standard
+                        tools that employers demand giving you the practical skills to excel in today's tech job market.
+                    </p>
+                    <div class="partners-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <span>Industry-Relevant Curriculum</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+                            <span>Platform-Certified Instructors</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                            <span>Real-World Tools & Labs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!-- CTA Section -->
+    <section class="training-cta">
+        <div class="container">
+            <div class="cta-content-wrapper">
+                <div class="cta-text-content">
+                    <h2 class="cta-title-large">Ready to advance your career?</h2>
+                    <p class="cta-subtitle-large">
+                        Join thousands of professionals who have transformed their careers through our training programs.
+                    </p>
+                    <div class="cta-actions-large">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            Enroll now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-white btn-lg">
+                            Talk to an advisor
+                            <i class="fas fa-comments"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-visual-content">
+                    <div class="cta-stats-grid">
+                        <div class="cta-stat-card">
+                            <div class="cta-stat-number">500+</div>
+                            <div class="cta-stat-label">Students Trained</div>
+                        </div>
+                        <div class="cta-stat-card">
+                            <div class="cta-stat-number">95%</div>
+                            <div class="cta-stat-label">Success Rate</div>
+                        </div>
+                        <div class="cta-stat-card">
+                            <div class="cta-stat-number">50+</div>
+                            <div class="cta-stat-label">Certified Trainers</div>
+                        </div>
+                        <div class="cta-stat-card">
+                            <div class="cta-stat-number">24/7</div>
+                            <div class="cta-stat-label">Learning Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">About Us</h3>
+                    <p class="footer-text">
+                        At DeediX Technologies, we are more than just an IT service provider —
+                        we are your strategic partner in navigating the complexities of the digital world.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/deedixtech" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/deedixtech" class="social-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/deedixtech" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/deedixtech" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="service.html">Managed IT Services</a></li>
+                        <li><a href="service.html">Cloud Solutions</a></li>
+                        <li><a href="service.html">Cybersecurity</a></li>
+                        <li><a href="service.html">IT Consulting</a></li>
+                        <li><a href="trainings.html">Technical Trainings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="people.html">Our People</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog & Insights</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:info@deedixtech.com">info@deedixtech.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <a href="tel:+2348074387880">+234 807 438 7880</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <a href="tel:+447849417587">+44 7849 417 587</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <span>Edo State, Nigeria & London, UK</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> DeediX Technologies. All rights reserved. Built with excellence.</p>
+
+                <div class="footer-legal-links">
+                    <a href="terms-condition.html">Terms & Conditions</a> |
+                    <a href="privacy.html">Privacy Policy</a> |
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- AI Chatbot Widget -->
+    <button type="button" class="chat-button" id="chatButton" aria-label="Open chat">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-header-info">
+                <h3 class="chat-header-title">DeediX Assistant</h3>
+                <p class="chat-header-status">
+                    <span class="status-dot"></span>
+                    Online
+                </p>
+            </div>
+            <button type="button" class="chat-close-btn" id="chatCloseBtn" aria-label="Close chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="message-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="typing-dots">
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text"
+                   class="chat-input"
+                   id="chatInput"
+                   placeholder="Type your message..."
+                   autocomplete="off">
+            <button type="button" class="chat-send-btn" id="sendButton" disabled aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348074387880?text=Hi%20DeediX%20Technologies!%20I'm%20interested%20in%20your%20IT%20services."
+           class="whatsapp-bubble" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <div class="whatsapp-status"></div>
+        </a>
+        <div class="whatsapp-tooltip">
+            <strong>Chat with Us</strong><br>
+            Quick response on WhatsApp
+        </div>
+    </div>
+     -->
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/main-site/js/modern-main.js"></script>
+    <script src="assets/main-site/js/trainings.js"></script>
+</body>
+</html>

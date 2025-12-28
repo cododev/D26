@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - DeediX Shop</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0078d4">
+    <meta name="theme-color" content="#0078d4">
+    
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/user-menu.css">
+</head>
+<body>
+    <!-- Header (consistent with homepage) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="shop-logo-text">
+                    <span class="shop-logo-brand">DEEDIX</span>
+                    <span class="shop-logo-tagline">SHOP</span>
+                </a>
+
+                <nav class="nav" id="mainNav">
+                    <a href="index.html">All Products</a>
+                    <a href="smartphones.html">Smartphones</a>
+                    <a href="laptops.html">Laptops</a>
+                    <a href="gaming.html">Gaming</a>
+                    <a href="accessories.html">Accessories</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <button aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="user-menu">
+                        <a href="login.html" id="authBtn" class="btn-auth">
+                            <i class="fas fa-user"></i> Sign In
+                        </a>
+                        <div id="userDropdown" class="dropdown" style="display: none;">
+                            <span id="userName"></span>
+                            <button id="logoutBtn">Logout</button>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="cart-icon active">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main cart-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Shopping Cart</h1>
+                <p id="cartItemCount">0 items in your cart</p>
+            </div>
+
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <section class="cart-items-section">
+                    <div id="emptyCart" class="empty-cart">
+                        <i class="fas fa-shopping-cart empty-cart-icon"></i>
+                        <h2>Your cart is empty</h2>
+                        <p>Looks like you haven't added anything yet.</p>
+                        <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+                    </div>
+
+                    <div id="cartItemsContainer"></div>
+                </section>
+
+                <!-- Order Summary -->
+                <aside class="order-summary">
+                    <h3>Order Summary</h3>
+
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₦0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shipping">Calculated at checkout</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Estimated Tax (7.5%)</span>
+                            <span id="tax">₦0</span>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="summary-row total">
+                        <strong>Total</strong>
+                        <strong id="total">₦0</strong>
+                    </div>
+
+                    <button class="btn btn-primary btn-block" id="checkoutBtn" disabled>
+                        Proceed to Checkout
+                    </button>
+
+                    <p class="free-shipping-note">
+                        <i class="fas fa-truck"></i>
+                        Free shipping on orders over ₦200,000
+                    </p>
+
+                    <a href="index.html" class="continue-shopping">← Continue Shopping</a>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="index.html" class="shop-logo-text">
+                        <span class="shop-logo-brand">DEEDIX</span>
+                        <span class="shop-logo-tagline">SHOP</span>
+                    </a>
+                    <h3 class="footer-title">About DeediX Shop</h3>
+                    <p class="footer-text">
+                        Your trusted destination for premium tech products. We offer brand new and quality used electronics with warranty and excellent customer service.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">All Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refunds.html">Refund Policy</a></li>
+                        <li><a href="terms-condition.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> DeediX Technologies. All rights reserved.</p>
+                <div class="footer-payment-icons">
+                    <span class="payment-label">We accept:</span>
+                    <img src="assets/svg/visa.svg" alt="Visa" class="payment-svg" />
+                    <img src="assets/svg/mastercard.svg" alt="Mastercard" class="payment-svg" />
+                    <img src="assets/svg/bank.png" alt="Bank Transfer" class="payment-svg" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Support Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348074387880?text=Hi%20DeediX%20Shop!%20I%20need%20help%20with%20my%20cart."
+           class="whatsapp-bubble" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <div class="whatsapp-status"></div>
+        </a>
+        <div class="whatsapp-tooltip">
+            <strong>24/7 WhatsApp Support</strong><br>
+            <span style="font-size:13px;">Reply within minutes (8:00 – 18:00)<br>After hours: within 2 hours</span>
+        </div>
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/api-client.js"></script>
+    <script src="assets/js/mobile-nav.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/user-auth.js"></script>
+</body>
+</html>

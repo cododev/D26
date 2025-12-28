@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - DeediX Shop</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0078d4">
+    <meta name="theme-color" content="#0078d4">
+
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/user-menu.css">
+    <style>
+        .policy-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 4rem 0 3rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .policy-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .policy-hero p {
+            font-size: 1.125rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .policy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .policy-section h2 {
+            color: #667eea;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .policy-section h2 i {
+            font-size: 1.5rem;
+        }
+
+        .policy-section h3 {
+            color: #2d3748;
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .policy-section p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul, .policy-section ol {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul li, .policy-section ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-highlight {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .policy-warning {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .policy-success {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .policy-contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .policy-contact-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-contact-box p {
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .policy-contact-box a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #718096;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-box {
+            background: #edf2f7;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .timeline-box h4 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .timeline-step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+
+        .timeline-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding-top: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .policy-hero h1 {
+                font-size: 2rem;
+            }
+
+            .policy-hero {
+                padding: 3rem 1rem 2rem;
+            }
+
+            .policy-section {
+                padding: 1.5rem;
+            }
+
+            .policy-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="shop-logo-text">
+                    <span class="shop-logo-brand">DEEDIX</span>
+                    <span class="shop-logo-tagline">SHOP</span>
+                </a>
+
+                <nav class="nav" id="mainNav">
+                    <a href="index.html">All Products</a>
+                    <a href="smartphones.html">Smartphones</a>
+                    <a href="laptops.html">Laptops</a>
+                    <a href="gaming.html">Gaming</a>
+                    <a href="accessories.html">Accessories</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <button aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="user-menu">
+                        <a href="login.html" id="authBtn" class="btn-auth">
+                            <i class="fas fa-user"></i> Sign In
+                        </a>
+                        <div id="userDropdown" class="dropdown" style="display: none;">
+                            <span id="userName"></span>
+                            <button id="logoutBtn">Logout</button>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount" class="hidden"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="policy-hero">
+        <div class="container">
+            <h1><i class="fas fa-undo-alt"></i> Refund & Return Policy</h1>
+            <p>Shop with confidence. We stand behind our products with a fair and transparent refund policy.</p>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <main class="policy-content">
+        <p class="last-updated"><strong>Last Updated:</strong> December 27, 2025</p>
+
+        <!-- Introduction -->
+        <div class="policy-section">
+            <h2><i class="fas fa-info-circle"></i> Our Commitment</h2>
+            <p>At DeediX Shop, customer satisfaction is our top priority. We understand that sometimes products may not meet your expectations or may arrive damaged. This Refund & Return Policy outlines the conditions and procedures for returning products and receiving refunds.</p>
+
+            <div class="policy-success">
+                <strong><i class="fas fa-check-circle"></i> Our Guarantee:</strong> We offer a 7-day return policy on most products and full refunds for defective or damaged items.
+            </div>
+        </div>
+
+        <!-- Return Window -->
+        <div class="policy-section">
+            <h2><i class="fas fa-calendar-alt"></i> Return Time Frames</h2>
+
+            <h3>Standard Return Period</h3>
+            <p>You may return most items within <strong>7 days</strong> of receiving your order for a full refund or exchange, provided the items meet our return conditions.</p>
+
+            <h3>Extended Return Period</h3>
+            <p>The following items qualify for a <strong>14-day</strong> return period:</p>
+            <ul>
+                <li>Laptops and computers</li>
+                <li>Gaming consoles (unopened)</li>
+                <li>High-value items over ₦500,000</li>
+            </ul>
+
+            <div class="policy-warning">
+                <strong><i class="fas fa-exclamation-triangle"></i> Important:</strong> The return period begins from the date you receive the item, not the purchase date. Items must be returned within the specified timeframe to qualify for a refund.
+            </div>
+        </div>
+
+        <!-- Eligible Items -->
+        <div class="policy-section">
+            <h2><i class="fas fa-check-double"></i> Eligible Items for Return</h2>
+            <p>To be eligible for a return, items must meet the following conditions:</p>
+            <ul>
+                <li><strong>Unused and Unopened:</strong> Items must be in their original condition, unworn, unused, and in original packaging</li>
+                <li><strong>All Accessories Included:</strong> All original accessories, manuals, and documentation must be included</li>
+                <li><strong>Original Packaging:</strong> Items must be in original manufacturer packaging (if applicable)</li>
+                <li><strong>Proof of Purchase:</strong> You must provide your order number or receipt</li>
+                <li><strong>No Physical Damage:</strong> Items must not show signs of wear, damage, or modification</li>
+            </ul>
+
+            <h3>Items with Special Conditions</h3>
+            <ul>
+                <li><strong>Smartphones & Tablets:</strong> Must have original IMEI intact, no screen damage, and all protective films in place</li>
+                <li><strong>Earbuds & Headphones:</strong> Must be unopened due to hygiene reasons (unless defective)</li>
+                <li><strong>Software & Digital Products:</strong> Non-returnable once activated or downloaded</li>
+            </ul>
+        </div>
+
+        <!-- Non-Returnable Items -->
+        <div class="policy-section">
+            <h2><i class="fas fa-ban"></i> Non-Returnable Items</h2>
+            <p>The following items cannot be returned or refunded unless they are defective:</p>
+            <ul>
+                <li>Earbuds, earphones, and in-ear headphones (opened packages)</li>
+                <li>Software, games, and digital download codes (once activated)</li>
+                <li>Gift cards and vouchers</li>
+                <li>Items marked as "Final Sale" or "Clearance"</li>
+                <li>Personalized or custom-ordered items</li>
+                <li>Items purchased during special promotions (check promotion terms)</li>
+                <li>Items damaged due to misuse or improper handling</li>
+            </ul>
+
+            <div class="policy-highlight">
+                <strong>Note:</strong> Even if an item is non-returnable, we will always honor our warranty obligations for defective products.
+            </div>
+        </div>
+
+        <!-- Defective or Damaged Items -->
+        <div class="policy-section">
+            <h2><i class="fas fa-tools"></i> Defective or Damaged Items</h2>
+            <p>If you receive a defective or damaged item, we will provide a full refund or replacement at no additional cost.</p>
+
+            <h3>What to Do:</h3>
+            <ol>
+                <li><strong>Inspect Upon Delivery:</strong> Check your items immediately upon delivery</li>
+                <li><strong>Document the Issue:</strong> Take clear photos or videos of the defect or damage</li>
+                <li><strong>Contact Us Within 48 Hours:</strong> Report the issue via email, WhatsApp, or phone</li>
+                <li><strong>Provide Details:</strong> Include your order number, photos, and description of the issue</li>
+            </ol>
+
+            <div class="policy-success">
+                <strong><i class="fas fa-shipping-fast"></i> Fast Resolution:</strong> We will arrange for pickup and replacement within 2-3 business days for defective items.
+            </div>
+        </div>
+
+        <!-- Return Process -->
+        <div class="policy-section">
+            <h2><i class="fas fa-exchange-alt"></i> How to Return an Item</h2>
+
+            <div class="timeline-box">
+                <h4>Step-by-Step Return Process:</h4>
+
+                <div class="timeline-step">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <strong>Initiate Return Request</strong><br>
+                        Contact us via email (shop@deedixtech.com), WhatsApp (+234 807 438-7880), or through our contact page within the return period.
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <strong>Provide Order Information</strong><br>
+                        Share your order number, item details, and reason for return. Attach photos if applicable.
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <strong>Receive Return Authorization</strong><br>
+                        We will review your request and provide a Return Authorization (RA) number within 24 hours.
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <strong>Package Your Item</strong><br>
+                        Securely pack the item in its original packaging with all accessories. Include the RA number inside the package.
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <strong>Ship or Arrange Pickup</strong><br>
+                        For defective items: We arrange free pickup. For other returns: Ship to our address (provided with RA number).
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-number">6</div>
+                    <div class="timeline-content">
+                        <strong>Inspection & Refund</strong><br>
+                        Once we receive the item, we will inspect it and process your refund within 3-5 business days.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Refund Methods -->
+        <div class="policy-section">
+            <h2><i class="fas fa-money-bill-wave"></i> Refund Methods & Timeline</h2>
+
+            <h3>How You Will Receive Your Refund</h3>
+            <ul>
+                <li><strong>Card Payments:</strong> Refunded to the original payment method (3-7 business days)</li>
+                <li><strong>Bank Transfer:</strong> Refunded to your bank account (2-3 business days)</li>
+                <li><strong>Cash on Delivery:</strong> Refunded via bank transfer to your provided account</li>
+            </ul>
+
+            <h3>Refund Processing Time</h3>
+            <p>Once we receive and inspect your returned item:</p>
+            <ul>
+                <li><strong>Inspection:</strong> 1-2 business days</li>
+                <li><strong>Refund Initiation:</strong> 1 business day</li>
+                <li><strong>Bank Processing:</strong> 2-7 business days (depending on your bank)</li>
+            </ul>
+
+            <div class="policy-highlight">
+                <strong>Total Timeframe:</strong> You should receive your refund within 5-10 business days from when we receive your return.
+            </div>
+        </div>
+
+        <!-- Shipping Costs -->
+        <div class="policy-section">
+            <h2><i class="fas fa-shipping-fast"></i> Return Shipping Costs</h2>
+
+            <h3>Who Pays for Return Shipping?</h3>
+            <ul>
+                <li><strong>Defective or Damaged Items:</strong> We pay for return shipping and arrange pickup</li>
+                <li><strong>Wrong Item Sent:</strong> We pay for return shipping and arrange pickup</li>
+                <li><strong>Change of Mind:</strong> Customer is responsible for return shipping costs</li>
+                <li><strong>Non-Defective Returns:</strong> Customer pays for return shipping</li>
+            </ul>
+
+            <p><strong>Return Shipping Address:</strong> (Provided with your Return Authorization number)</p>
+        </div>
+
+        <!-- Exchanges -->
+        <div class="policy-section">
+            <h2><i class="fas fa-sync-alt"></i> Exchanges</h2>
+            <p>We currently process exchanges as returns and new orders. To exchange an item:</p>
+            <ol>
+                <li>Return the original item following our return process</li>
+                <li>Once the return is processed, place a new order for the desired item</li>
+                <li>We will prioritize processing your new order</li>
+            </ol>
+
+            <div class="policy-success">
+                <strong>Priority Exchanges:</strong> For defective items, we can ship the replacement immediately upon receiving your return request.
+            </div>
+        </div>
+
+        <!-- Warranty -->
+        <div class="policy-section">
+            <h2><i class="fas fa-certificate"></i> Warranty Information</h2>
+            <p>All products sold on DeediX Shop come with warranty protection:</p>
+            <ul>
+                <li><strong>New Products:</strong> Covered by manufacturer's warranty (6 months to 2 years depending on product)</li>
+                <li><strong>Used Products:</strong> Covered by our 30-day warranty</li>
+                <li><strong>Warranty Claims:</strong> Contact us with your order number and issue description</li>
+            </ul>
+
+            <p>Warranty coverage is separate from our return policy and extends beyond the return period.</p>
+        </div>
+
+        <!-- Contact for Returns -->
+        <div class="policy-contact-box">
+            <h3><i class="fas fa-headset"></i> Need to Return an Item?</h3>
+            <p>Our customer service team is here to help make your return process as smooth as possible.</p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:shop@deedixtech.com">shop@deedixtech.com</a><br>
+                <strong>Phone:</strong> <a href="tel:+2348074387880">+234 807 438-7880</a><br>
+                <strong>WhatsApp:</strong> <a href="https://wa.me/2348074387880" target="_blank">Chat with us (Fastest Response)</a><br>
+                <strong>Contact Page:</strong> <a href="contact.html">Visit our contact page</a>
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                <strong>Business Hours:</strong> Monday - Saturday, 8:00 AM - 6:00 PM WAT<br>
+                <em>We respond to all inquiries within 24 hours</em>
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">About DeediX Shop</h3>
+                    <p class="footer-text">
+                        Your trusted destination for premium tech products. We offer brand new and quality used electronics with warranty and excellent customer service.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">All Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refunds.html">Refund Policy</a></li>
+                        <li><a href="refunds.html">Refund Policy</a></li>
+                        <li><a href="terms-condition.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> DeediX Technologies. All rights reserved.</p>
+                <div class="footer-payment-icons">
+                    <span class="payment-label">We accept:</span>
+                    <img src="assets/svg/visa.svg" alt="Visa" class="payment-svg" />
+                    <img src="assets/svg/mastercard.svg" alt="Mastercard" class="payment-svg" />
+                    <img src="assets/svg/bank.png" alt="Bank Transfer" class="payment-svg" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Support Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348074387880?text=Hi%20DeediX%20Shop!%20I%20need%20help%20with%20a%20return%20or%20refund."
+           class="whatsapp-bubble" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <div class="whatsapp-status"></div>
+        </a>
+        <div class="whatsapp-tooltip">
+            <strong>24/7 Support via WhatsApp</strong><br>
+            <span style="font-size:13px;">We typically reply within minutes<br>
+            (8:00 – 18:00 daily • After hours: within 2 hours)</span>
+        </div>
+    </div>
+
+    <script src="assets/js/mobile-nav.js"></script>
+    <script src="assets/js/user-auth.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

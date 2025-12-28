@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - DeediX Shop</title>
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="shop-logo-text">
+                    <span class="shop-logo-brand">DEEDIX</span>
+                    <span class="shop-logo-tagline">SHOP</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html">All Products</a>
+                    <a href="smartphones.html">Smartphones</a>
+                    <a href="laptops.html">Laptops</a>
+                    <a href="gaming.html">Gaming</a>
+                    <a href="accessories.html">Accessories</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount" class="hidden"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main auth-main">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Page Header -->
+                <div class="auth-page-header">
+                    <h1 class="auth-page-title">Sign in to DeediX Shop</h1>
+                </div>
+
+                <!-- Login Form -->
+                <div class="auth-card" id="loginCard">
+                    <form class="auth-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email or Phone Number</label>
+                            <input type="email" id="loginEmail" name="email" required placeholder="name@mail.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="password" required placeholder="••••••••••••">
+                            <span class="btn-submit-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember">
+                                <span>Remember me</span>
+                            </label>
+                        </div>
+
+                        <button type="submit">
+                            Sign In
+                            <span class="btn-submit-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </button>
+
+                        <div class="auth-footer-links">
+                            <a href="#" class="link-primary">Forgotten your password?</a>
+                        </div>
+                    </form>
+
+                    <p class="no-account-text">
+                        Do not have an DeediX Account?
+                        <a href="register.html">Create Your DeediX Account</a>
+                    </p>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-card" id="registerCard" style="display: none;">
+                    <form class="auth-form" id="registerForm">
+                        <div class="form-group">
+                            <label for="registerName">Full Name</label>
+                            <input type="text" id="registerName" name="name" required placeholder="John Doe" autocomplete="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerEmail">Email Address</label>
+                            <input type="email" id="registerEmail" name="email" required placeholder="your@email.com" autocomplete="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPhone">Phone Number (Optional)</label>
+                            <input type="tel" id="registerPhone" name="phone" placeholder="+234 807 000-0000" autocomplete="tel">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPassword">Password</label>
+                            <input type="password" id="registerPassword" name="password" required placeholder="••••••••••••" minlength="6" autocomplete="new-password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerConfirmPassword">Confirm Password</label>
+                            <input type="password" id="registerConfirmPassword" name="confirm_password" required placeholder="••••••••••••" minlength="6" autocomplete="new-password">
+                        </div>
+
+                        <label class="checkbox-label" style="margin-bottom: 1.5rem;">
+                            <input type="checkbox" name="terms" required id="termsCheckbox">
+                            <span>I agree to the <a href="terms-condition.html" target="_blank" style="color: #0071e3;">Terms & Conditions</a></span>
+                        </label>
+
+                        <button type="submit" id="registerSubmitBtn">
+                            Create Account
+                            <span class="btn-submit-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+
+                    <p class="no-account-text">
+                        Already have an account?
+                        <a href="#" id="showLogin">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="index.html" class="shop-logo-text">
+                        <span class="shop-logo-brand">DEEDIX</span>
+                        <span class="shop-logo-tagline">SHOP</span>
+                    </a>
+                    <h3 class="footer-title">About DeediX Shop</h3>
+                    <p class="footer-text">
+                        Your trusted destination for premium tech products. We offer brand new and quality used electronics with warranty and excellent customer service.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">All Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refunds.html">Refund Policy</a></li>
+                        <li><a href="terms-condition.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> DeediX Technologies. All rights reserved.</p>
+                <p class="footer-payment">We accept: Visa, Mastercard, Bank Transfer</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/api-client.js"></script>
+    <script src="assets/js/toast.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/auth.js"></script>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348074387880?text=Hi%20DeediX%20Shop!%20I%20need%20help%20with%20my%20account."
+            class="whatsapp-bubble"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <div class="whatsapp-status"></div>
+        </a>
+        <div class="whatsapp-tooltip">
+            <strong>Need Help?</strong><br>
+            <span style="font-size:13px;">Chat with us on WhatsApp<br>
+            We're here to assist you!</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - DeediX Shop</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0078d4">
+    <meta name="theme-color" content="#0078d4">
+
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/user-menu.css">
+    <style>
+        .policy-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 4rem 0 3rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .policy-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .policy-hero p {
+            font-size: 1.125rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .policy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .policy-section h2 {
+            color: #667eea;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .policy-section h2 i {
+            font-size: 1.5rem;
+        }
+
+        .policy-section h3 {
+            color: #2d3748;
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .policy-section p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul, .policy-section ol {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul li, .policy-section ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-highlight {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .policy-warning {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .policy-contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .policy-contact-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-contact-box p {
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .policy-contact-box a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #718096;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .policy-hero h1 {
+                font-size: 2rem;
+            }
+
+            .policy-hero {
+                padding: 3rem 1rem 2rem;
+            }
+
+            .policy-section {
+                padding: 1.5rem;
+            }
+
+            .policy-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="shop-logo-text">
+                    <span class="shop-logo-brand">DEEDIX</span>
+                    <span class="shop-logo-tagline">SHOP</span>
+                </a>
+
+                <nav class="nav" id="mainNav">
+                    <a href="index.html">All Products</a>
+                    <a href="smartphones.html">Smartphones</a>
+                    <a href="laptops.html">Laptops</a>
+                    <a href="gaming.html">Gaming</a>
+                    <a href="accessories.html">Accessories</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <button aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="user-menu">
+                        <a href="login.html" id="authBtn" class="btn-auth">
+                            <i class="fas fa-user"></i> Sign In
+                        </a>
+                        <div id="userDropdown" class="dropdown" style="display: none;">
+                            <span id="userName"></span>
+                            <button id="logoutBtn">Logout</button>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount" class="hidden"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="policy-hero">
+        <div class="container">
+            <h1><i class="fas fa-file-contract"></i> Terms & Conditions</h1>
+            <p>Please read these terms carefully before using our services or making a purchase.</p>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <main class="policy-content">
+        <p class="last-updated"><strong>Last Updated:</strong> December 27, 2025</p>
+
+        <!-- Introduction -->
+        <div class="policy-section">
+            <h2><i class="fas fa-gavel"></i> Agreement to Terms</h2>
+            <p>Welcome to DeediX Shop. These Terms and Conditions ("Terms") govern your use of our website and the purchase of products from our online store. By accessing our website or making a purchase, you agree to be bound by these Terms.</p>
+
+            <div class="policy-warning">
+                <strong><i class="fas fa-exclamation-circle"></i> Important:</strong> If you do not agree with any part of these Terms, you must not use our website or purchase our products.
+            </div>
+
+            <p>These Terms constitute a legally binding agreement between you ("Customer," "You," or "Your") and DeediX Technologies Limited ("DeediX Shop," "We," "Us," or "Our").</p>
+        </div>
+
+        <!-- Use of Website -->
+        <div class="policy-section">
+            <h2><i class="fas fa-desktop"></i> Use of Our Website</h2>
+
+            <h3>Eligibility</h3>
+            <p>You must be at least 18 years old to make purchases on our website. By placing an order, you confirm that you are of legal age and have the legal capacity to enter into a binding contract.</p>
+
+            <h3>Account Registration</h3>
+            <ul>
+                <li>You may need to create an account to make purchases</li>
+                <li>You are responsible for maintaining the confidentiality of your account credentials</li>
+                <li>You agree to provide accurate, current, and complete information</li>
+                <li>You must notify us immediately of any unauthorized use of your account</li>
+                <li>You are responsible for all activities that occur under your account</li>
+            </ul>
+
+            <h3>Prohibited Activities</h3>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the website for any unlawful purpose</li>
+                <li>Attempt to gain unauthorized access to our systems</li>
+                <li>Interfere with the proper functioning of the website</li>
+                <li>Upload viruses, malware, or harmful code</li>
+                <li>Scrape, copy, or reproduce website content without permission</li>
+                <li>Impersonate any person or entity</li>
+                <li>Engage in fraudulent activities or payment disputes in bad faith</li>
+            </ul>
+        </div>
+
+        <!-- Product Information -->
+        <div class="policy-section">
+            <h2><i class="fas fa-box-open"></i> Product Information & Availability</h2>
+
+            <h3>Product Descriptions</h3>
+            <p>We strive to provide accurate product descriptions, specifications, and images. However:</p>
+            <ul>
+                <li>Product images are for illustration purposes and may vary slightly from actual products</li>
+                <li>We do not warrant that product descriptions are accurate, complete, or error-free</li>
+                <li>Colors may appear differently depending on your display settings</li>
+                <li>We reserve the right to correct any errors or inaccuracies</li>
+            </ul>
+
+            <h3>Product Availability</h3>
+            <ul>
+                <li>All products are subject to availability</li>
+                <li>We reserve the right to discontinue any product at any time</li>
+                <li>If a product becomes unavailable after you place an order, we will notify you and offer a refund or alternative</li>
+                <li>We do not guarantee that products will remain in stock</li>
+            </ul>
+
+            <div class="policy-highlight">
+                <strong>Product Condition:</strong> We clearly label products as "New" or "Used." Used products are tested and certified to meet our quality standards. All used items come with a 30-day warranty.
+            </div>
+        </div>
+
+        <!-- Pricing & Payment -->
+        <div class="policy-section">
+            <h2><i class="fas fa-tags"></i> Pricing & Payment Terms</h2>
+
+            <h3>Pricing</h3>
+            <ul>
+                <li>All prices are listed in Nigerian Naira (₦)</li>
+                <li>Prices are subject to change without notice</li>
+                <li>The price applicable is the price at the time of order placement</li>
+                <li>We reserve the right to correct pricing errors</li>
+                <li>Promotional prices are valid for the specified promotion period only</li>
+            </ul>
+
+            <h3>Taxes & Fees</h3>
+            <ul>
+                <li>Prices may include Value Added Tax (VAT) as required by Nigerian law</li>
+                <li>Shipping fees are calculated at checkout based on your location</li>
+                <li>Additional customs or import duties (if applicable) are the customer's responsibility</li>
+            </ul>
+
+            <h3>Payment Methods</h3>
+            <p>We accept the following payment methods:</p>
+            <ul>
+                <li><strong>Credit/Debit Cards:</strong> Visa, Mastercard, Verve (processed securely via Paystack)</li>
+                <li><strong>Bank Transfer:</strong> Direct transfer to our designated account</li>
+                <li><strong>Cash on Delivery:</strong> Pay with cash when you receive your order (available in select locations)</li>
+            </ul>
+
+            <h3>Payment Authorization</h3>
+            <ul>
+                <li>By providing payment information, you authorize us to charge the full order amount</li>
+                <li>Payment must be received before order fulfillment (except for Cash on Delivery)</li>
+                <li>We may verify payment information and reserve the right to cancel orders if payment fails</li>
+                <li>For bank transfers, orders are processed after payment confirmation</li>
+            </ul>
+        </div>
+
+        <!-- Orders & Fulfillment -->
+        <div class="policy-section">
+            <h2><i class="fas fa-shopping-cart"></i> Orders & Fulfillment</h2>
+
+            <h3>Order Acceptance</h3>
+            <ul>
+                <li>Your order constitutes an offer to purchase products</li>
+                <li>We reserve the right to accept or decline any order</li>
+                <li>Order confirmation email does not guarantee acceptance</li>
+                <li>We may cancel orders due to pricing errors, product unavailability, or suspected fraud</li>
+            </ul>
+
+            <h3>Order Cancellation</h3>
+            <p><strong>By Customer:</strong></p>
+            <ul>
+                <li>You may cancel your order before it ships by contacting us</li>
+                <li>Once shipped, cancellation is not possible (refer to our Refund Policy)</li>
+                <li>Refunds for cancelled orders are processed within 3-7 business days</li>
+            </ul>
+
+            <p><strong>By DeediX Shop:</strong></p>
+            <ul>
+                <li>We may cancel orders due to product unavailability, pricing errors, or payment issues</li>
+                <li>You will receive full refund for cancelled orders</li>
+                <li>We will notify you via email or phone if we cancel your order</li>
+            </ul>
+
+            <h3>Order Modifications</h3>
+            <p>Order modifications (shipping address, items, quantities) may be possible if the order has not been processed. Contact us immediately if you need to modify your order.</p>
+        </div>
+
+        <!-- Shipping & Delivery -->
+        <div class="policy-section">
+            <h2><i class="fas fa-shipping-fast"></i> Shipping & Delivery</h2>
+
+            <h3>Shipping Locations</h3>
+            <p>We currently ship to all locations within Nigeria. International shipping is not available at this time.</p>
+
+            <h3>Shipping Times</h3>
+            <ul>
+                <li><strong>Lagos:</strong> 1-2 business days</li>
+                <li><strong>Major Cities:</strong> 2-4 business days</li>
+                <li><strong>Other Locations:</strong> 3-7 business days</li>
+            </ul>
+
+            <div class="policy-highlight">
+                <strong>Note:</strong> Delivery times are estimates and may be affected by holidays, weather, or courier delays. We are not responsible for delays caused by third-party couriers.
+            </div>
+
+            <h3>Shipping Fees</h3>
+            <ul>
+                <li>Shipping fees are calculated based on location and order weight</li>
+                <li>Free shipping is available for orders over ₦200,000</li>
+                <li>Shipping costs are displayed at checkout before payment</li>
+            </ul>
+
+            <h3>Delivery Responsibilities</h3>
+            <ul>
+                <li>Ensure someone is available to receive the delivery</li>
+                <li>Provide accurate delivery address and phone number</li>
+                <li>Inspect items upon delivery and report any damage immediately</li>
+                <li>Sign for delivery confirmation</li>
+            </ul>
+
+            <h3>Failed Delivery</h3>
+            <p>If delivery fails due to incorrect address, unavailability, or refusal to accept:</p>
+            <ul>
+                <li>We will attempt delivery up to 3 times</li>
+                <li>Additional delivery fees may apply for re-delivery</li>
+                <li>Items may be returned to us, and return shipping fees will be deducted from refund</li>
+            </ul>
+        </div>
+
+        <!-- Returns & Refunds -->
+        <div class="policy-section">
+            <h2><i class="fas fa-undo"></i> Returns & Refunds</h2>
+            <p>Our return and refund policies are detailed in our separate <a href="refunds.html" style="color: #667eea; text-decoration: underline;">Refund Policy</a>. Key points include:</p>
+            <ul>
+                <li>7-day return period for most items</li>
+                <li>Items must be unused, in original packaging, with all accessories</li>
+                <li>Defective items are covered for full refund or replacement</li>
+                <li>Certain items (opened earbuds, software, gift cards) are non-returnable</li>
+            </ul>
+        </div>
+
+        <!-- Warranty -->
+        <div class="policy-section">
+            <h2><i class="fas fa-shield-alt"></i> Warranty & Guarantees</h2>
+
+            <h3>Product Warranty</h3>
+            <ul>
+                <li><strong>New Products:</strong> Covered by manufacturer's warranty (6 months to 2 years)</li>
+                <li><strong>Used Products:</strong> Covered by our 30-day warranty</li>
+                <li><strong>Refurbished Products:</strong> Covered by our 90-day warranty</li>
+            </ul>
+
+            <h3>Warranty Claims</h3>
+            <p>To make a warranty claim:</p>
+            <ol>
+                <li>Contact us with your order number and description of the issue</li>
+                <li>Provide photos or videos of the defect</li>
+                <li>We will assess the claim within 24-48 hours</li>
+                <li>Approved claims result in repair, replacement, or refund</li>
+            </ol>
+
+            <h3>Warranty Exclusions</h3>
+            <p>Warranties do not cover:</p>
+            <ul>
+                <li>Damage caused by misuse, abuse, or accidents</li>
+                <li>Normal wear and tear</li>
+                <li>Unauthorized repairs or modifications</li>
+                <li>Water damage (unless product is water-resistant and damage occurred under normal use)</li>
+                <li>Software issues or viruses</li>
+            </ul>
+
+            <div class="policy-warning">
+                <strong>Disclaimer of Other Warranties:</strong> Except as expressly stated, we provide products "AS IS" without any warranties, express or implied, including warranties of merchantability or fitness for a particular purpose.
+            </div>
+        </div>
+
+        <!-- Intellectual Property -->
+        <div class="policy-section">
+            <h2><i class="fas fa-copyright"></i> Intellectual Property Rights</h2>
+            <p>All content on this website, including but not limited to:</p>
+            <ul>
+                <li>Text, graphics, logos, images, and icons</li>
+                <li>Product descriptions and specifications</li>
+                <li>Software, code, and design</li>
+                <li>DeediX Shop branding and trademarks</li>
+            </ul>
+
+            <p>...is the property of DeediX Technologies Limited or its content suppliers and is protected by Nigerian and international copyright laws.</p>
+
+            <h3>Permitted Use</h3>
+            <p>You may view, download, and print content for personal, non-commercial use only. You may not:</p>
+            <ul>
+                <li>Reproduce, distribute, or modify website content</li>
+                <li>Use content for commercial purposes without written permission</li>
+                <li>Remove copyright or proprietary notices</li>
+            </ul>
+        </div>
+
+        <!-- Limitation of Liability -->
+        <div class="policy-section">
+            <h2><i class="fas fa-exclamation-triangle"></i> Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law:</p>
+            <ul>
+                <li>DeediX Shop shall not be liable for any indirect, incidental, special, or consequential damages</li>
+                <li>Our total liability shall not exceed the amount you paid for the product(s) in question</li>
+                <li>We are not responsible for delays, failures, or losses caused by events beyond our control (force majeure)</li>
+                <li>We do not guarantee uninterrupted or error-free website operation</li>
+            </ul>
+
+            <div class="policy-highlight">
+                <strong>Note:</strong> Nothing in these Terms limits our liability for fraud, fraudulent misrepresentation, or death/personal injury caused by our negligence.
+            </div>
+        </div>
+
+        <!-- Indemnification -->
+        <div class="policy-section">
+            <h2><i class="fas fa-handshake"></i> Indemnification</h2>
+            <p>You agree to indemnify and hold DeediX Technologies Limited harmless from any claims, damages, losses, or expenses arising from:</p>
+            <ul>
+                <li>Your violation of these Terms</li>
+                <li>Your violation of any law or third-party rights</li>
+                <li>Your use of our products or services</li>
+                <li>Any content you submit through our website</li>
+            </ul>
+        </div>
+
+        <!-- Dispute Resolution -->
+        <div class="policy-section">
+            <h2><i class="fas fa-balance-scale"></i> Dispute Resolution</h2>
+
+            <h3>Governing Law</h3>
+            <p>These Terms are governed by the laws of the Federal Republic of Nigeria.</p>
+
+            <h3>Resolution Process</h3>
+            <ol>
+                <li><strong>Contact Us First:</strong> We encourage you to contact us to resolve any disputes informally</li>
+                <li><strong>Negotiation:</strong> We will attempt to resolve disputes through good-faith negotiation</li>
+                <li><strong>Arbitration:</strong> If negotiation fails, disputes may be referred to arbitration in Lagos, Nigeria</li>
+                <li><strong>Jurisdiction:</strong> Courts in Lagos, Nigeria shall have exclusive jurisdiction</li>
+            </ol>
+        </div>
+
+        <!-- Changes to Terms -->
+        <div class="policy-section">
+            <h2><i class="fas fa-edit"></i> Changes to These Terms</h2>
+            <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to this page with an updated "Last Updated" date.</p>
+            <p>Your continued use of our website after changes constitutes acceptance of the modified Terms. We encourage you to review these Terms periodically.</p>
+        </div>
+
+        <!-- Miscellaneous -->
+        <div class="policy-section">
+            <h2><i class="fas fa-list-ul"></i> Miscellaneous</h2>
+
+            <h3>Severability</h3>
+            <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+
+            <h3>Entire Agreement</h3>
+            <p>These Terms, together with our Privacy Policy and Refund Policy, constitute the entire agreement between you and DeediX Shop regarding your use of our website and purchase of products.</p>
+
+            <h3>Waiver</h3>
+            <p>Our failure to enforce any provision of these Terms does not constitute a waiver of that provision.</p>
+
+            <h3>Assignment</h3>
+            <p>You may not assign or transfer your rights under these Terms. We may assign our rights without restriction.</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="policy-contact-box">
+            <h3><i class="fas fa-question-circle"></i> Questions About These Terms?</h3>
+            <p>If you have any questions or concerns about these Terms and Conditions, please contact us:</p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:legal@deedixtech.com">legal@deedixtech.com</a><br>
+                <strong>Customer Support:</strong> <a href="mailto:shop@deedixtech.com">shop@deedixtech.com</a><br>
+                <strong>Phone:</strong> <a href="tel:+2348074387880">+234 807 438-7880</a><br>
+                <strong>WhatsApp:</strong> <a href="https://wa.me/2348074387880" target="_blank">Chat with us</a><br>
+                <strong>Contact Page:</strong> <a href="contact.html">Visit our contact page</a>
+            </p>
+            <p style="margin-top: 1rem;">
+                <strong>DeediX Technologies Limited</strong><br>
+                Lagos, Nigeria
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">About DeediX Shop</h3>
+                    <p class="footer-text">
+                        Your trusted destination for premium tech products. We offer brand new and quality used electronics with warranty and excellent customer service.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">All Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refunds.html">Refund Policy</a></li>
+                        <li><a href="refunds.html">Refund Policy</a></li>
+                        <li><a href="terms-condition.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> DeediX Technologies. All rights reserved.</p>
+                <div class="footer-payment-icons">
+                    <span class="payment-label">We accept:</span>
+                    <img src="assets/svg/visa.svg" alt="Visa" class="payment-svg" />
+                    <img src="assets/svg/mastercard.svg" alt="Mastercard" class="payment-svg" />
+                    <img src="assets/svg/bank.png" alt="Bank Transfer" class="payment-svg" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Support Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348074387880?text=Hi%20DeediX%20Shop!%20I%20have%20a%20question%20about%20your%20terms%20and%20conditions."
+           class="whatsapp-bubble" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <div class="whatsapp-status"></div>
+        </a>
+        <div class="whatsapp-tooltip">
+            <strong>24/7 Support via WhatsApp</strong><br>
+            <span style="font-size:13px;">We typically reply within minutes<br>
+            (8:00 – 18:00 daily • After hours: within 2 hours)</span>
+        </div>
+    </div>
+
+    <script src="assets/js/mobile-nav.js"></script>
+    <script src="assets/js/user-auth.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

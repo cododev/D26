@@ -1,0 +1,14 @@
+{
+    "name": "DeediX Technologies",
+    "short_name": "DeediX",
+    "icons": [
+        {
+            "src": "/assets/main-site/img/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#0078d4",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

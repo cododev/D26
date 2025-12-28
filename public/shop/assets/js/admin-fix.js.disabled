@@ -1,0 +1,136 @@
+/**
+ * Admin Dashboard Fixes
+ * Ensures all admin functions use correct backend routes
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Admin-fix.js loaded and running');
+
+    // Override setupAddAdminModal with fixed version
+    setTimeout(() => {
+        console.log('Admin-fix.js: Setting up Add Admin form override');
+        const adminForm = document.getElementById('addAdminForm');
+        if (!adminForm) {
+            console.warn('Admin-fix.js: addAdminForm not found');
+            return;
+        }
+
+        const newForm = adminForm.cloneNode(true);
+        adminForm.parentNode.replaceChild(newForm, adminForm);
+
+        newForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(newForm);
+            const data = Object.fromEntries(formData);
+
+            const submitBtn = newForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating admin...';
+
+            try {
+                const result = await adminAPI.createAdmin(data);
+
+                if (result.success) {
+                    alert('Admin added successfully!');
+                    document.getElementById('adminModal').classList.remove('active');
+                    newForm.reset();
+
+                    if (typeof loadUsersData === 'function') loadUsersData();
+                } else {
+                    alert(result.message || 'Failed to add admin');
+                }
+            } catch (error) {
+                console.error('Add admin error:', error);
+                alert('Error adding admin');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+    }, 500);
+
+    // Override loadUsersData to use corrected adminAPI routes
+    window.loadUsersData = async function () {
+        try {
+            const customersData = await adminAPI.getCustomers(); // /api/v1/admin/users/all
+            const adminsData = await adminAPI.getAdmins();       // /api/v1/admin/users/admin
+
+            if (customersData.success && adminsData.success) {
+                window.customers = (customersData.data || []).map(u => ({
+                    ...u,
+                    name: u.name || `${u.first_name || ''} ${u.last_name || ''}`.trim()
+                }));
+
+                window.admins = (adminsData.data || []).map(u => ({
+                    ...u,
+                    name: u.name || `${u.first_name || ''} ${u.last_name || ''}`.trim()
+                }));
+
+                if (typeof displayCustomers === 'function') displayCustomers();
+                if (typeof displayAdmins === 'function') displayAdmins();
+            } else {
+                console.error('Failed to load users:', customersData.message || adminsData.message);
+                const customersList = document.getElementById('customersList');
+                const adminsList = document.getElementById('adminsList');
+                if (customersList) customersList.innerHTML = '<p>Error loading customers</p>';
+                if (adminsList) adminsList.innerHTML = '<p>Error loading admins</p>';
+            }
+        } catch (error) {
+            console.error('Failed to load users:', error);
+            const customersList = document.getElementById('customersList');
+            const adminsList = document.getElementById('adminsList');
+            if (customersList) customersList.innerHTML = '<p>Network error</p>';
+            if (adminsList) adminsList.innerHTML = '<p>Network error</p>';
+        }
+    };
+
+    // Override loadAdminData to use corrected /admin/check route
+    window.loadAdminData = async function () {
+        try {
+            const data = await adminAPI.check(); // /admin/check
+
+            if (data.success && data.data?.authenticated) {
+                window.currentAdmin = data.data.admin;
+                if (typeof displayAdminInfo === 'function') displayAdminInfo();
+            } else {
+                window.location.href = 'admin-login.html';
+            }
+        } catch (error) {
+            console.error('Failed to load admin data:', error);
+            window.location.href = 'admin-login.html';
+        }
+    };
+
+    // Override dashboard stats loader
+    window.loadDashboardStats = async function () {
+        try {
+            const productsData = await adminAPI.getProducts(); // /admin/products
+            const ordersData = await adminAPI.getOrders();     // /admin/orders
+            const usersData = await adminAPI.getUsers();       // /admin/users/all
+
+            window.products = productsData.data || [];
+            window.orders = ordersData.data || [];
+            window.users = usersData.data || [];
+
+            const totalRevenue = window.orders
+                .filter(o => ['completed', 'delivered'].includes(o.status))
+                .reduce((sum, o) => sum + parseFloat(o.total || o.total_amount || 0), 0);
+
+            document.getElementById('totalRevenue').textContent = formatPrice(totalRevenue);
+            document.getElementById('totalProducts').textContent = window.products.length;
+            document.getElementById('totalOrders').textContent = window.orders.length;
+            document.getElementById('totalUsers').textContent = window.users.length;
+
+            if (typeof displayRecentOrders === 'function') displayRecentOrders();
+        } catch (error) {
+            console.error('Failed to load dashboard stats:', error);
+            document.getElementById('totalRevenue').textContent = '₦0.00';
+            document.getElementById('totalProducts').textContent = '0';
+            document.getElementById('totalOrders').textContent = '0';
+            document.getElementById('totalUsers').textContent = '0';
+        }
+    };
+});

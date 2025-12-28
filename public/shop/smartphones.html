@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphones - DeediX Shop</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0078d4">
+    <meta name="theme-color" content="#0078d4">
+
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/user-menu.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="index.html" class="shop-logo-text">
+                    <span class="shop-logo-brand">DEEDIX</span>
+                    <span class="shop-logo-tagline">SHOP</span>
+                </a>
+
+                <nav class="nav" id="mainNav">
+                    <a href="index.html">All Products</a>
+                    <a href="smartphones.html" class="active">Smartphones</a>
+                    <a href="laptops.html">Laptops</a>
+                    <a href="gaming.html">Gaming</a>
+                    <a href="accessories.html">Accessories</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search smartphones...">
+                        <button id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="user-menu">
+                        <a href="login.html" id="authBtn" class="btn-auth">
+                            <i class="fas fa-user"></i> Sign In
+                        </a>
+                        <div id="userDropdown" class="dropdown" style="display: none;">
+                            <span id="userName"></span>
+                            <button id="logoutBtn">Logout</button>
+                        </div>
+                    </div>
+
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount" class="hidden"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Video Slider -->
+            <section class="image-hero">
+                <div class="image-slider">
+                    <div class="slider-track">
+                        <div class="slide active video-slide">
+                            <video autoplay muted loop playsinline>
+                                <source src="assets/media/home-smartphone-1.webm" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="slide video-slide">
+                            <video autoplay muted loop playsinline>
+                                <source src="assets/media/home-smartphone-2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="slide video-slide">
+                            <video autoplay muted loop playsinline>
+                                <source src="assets/media/home-smartphone-3.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="slide video-slide">
+                            <video autoplay muted loop playsinline>
+                                <source src="assets/media/home-smartphone-4.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category Header -->
+            <section class="page-header">
+                <h1><i class="fas fa-mobile-alt"></i> Smartphones</h1>
+                <p>Browse our selection of smartphones - iPhone, Samsung, Google Pixel & more</p>
+            </section>
+
+            <!-- Filters -->
+            <section class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="featured">Featured</button>
+                <button class="filter-btn" data-filter="popular">Popular</button>
+                <button class="filter-btn" data-filter="new">New Arrivals</button>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="products-section">
+                <div id="loading" class="loading">Loading smartphones...</div>
+                <div id="productsGrid" class="products-grid"></div>
+                <div id="pagination" class="pagination"></div>
+            </section>
+        </div>
+    </main>
+    <!-- Trust Badges -->
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <i class="fas fa-truck" aria-hidden="true"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>Free Shipping</h4>
+                    <p>On orders over ₦200,000</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>Secure Payment</h4>
+                    <p>100% secure transactions</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>Quality Guarantee</h4>
+                    <p>Warranty on all products</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <i class="fas fa-headset" aria-hidden="true"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>24/7 Support</h4>
+                    <p>Always here to help</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="index.html" class="shop-logo-text">
+                        <span class="shop-logo-brand">DEEDIX</span>
+                        <span class="shop-logo-tagline">SHOP</span>
+                    </a>
+                    <h3 class="footer-title">About DeediX Shop</h3>
+                    <p class="footer-text">
+                        Your trusted destination for premium tech products. We offer brand new and quality used electronics with warranty and excellent customer service.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/deedixtech" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">All Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refunds.html">Refund Policy</a></li>
+                        <li><a href="terms-condition.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> DeediX Technologies. All rights reserved.</p>
+                <div class="footer-payment-icons">
+                    <span class="payment-label">We accept:</span>
+                    <img src="assets/svg/visa.svg" alt="Visa" class="payment-svg" />
+                    <img src="assets/svg/mastercard.svg" alt="Mastercard" class="payment-svg" />
+                    <img src="assets/svg/bank.png" alt="Bank Transfer" class="payment-svg" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Set category filter
+        const CATEGORY_FILTER = 'smartphones';
+    </script>
+    <script src="assets/js/api-client.js"></script>
+    <script src="assets/js/shop.js"></script>
+       <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .whatsapp-bubble {
+            background: #17783a;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .whatsapp-bubble:hover {
+            transform: scale(1.1);
+        }
+        .whatsapp-bubble i {
+            font-size: 32px;
+        }
+        .whatsapp-status {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            width: 14px;
+            height: 14px;
+            background: #00ff00;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+        .whatsapp-tooltip {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: #333;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: 12px;
+            border: 8px solid transparent;
+            border-top-color: #333;
+        }
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348074387880?text=Hi%20DeediX%20Shop!%20I'm%20interested%20in%20your%20products.%20Can%20you%20help%20me?"
+            class="whatsapp-bubble"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <div class="whatsapp-status"></div>
+        </a>
+        <div class="whatsapp-tooltip">
+            <strong>24/7 Support via WhatsApp</strong><br>
+            <span style="font-size:13px;">We typically reply within minutes<br>
+            (8:00 – 18:00 daily • After hours: within 2 hours)</span>
+        </div>
+    </div>
+    <script>
+        // Ensure all videos are muted
+        document.addEventListener('DOMContentLoaded', function() {
+            const allVideos = document.querySelectorAll('.slide video');
+            allVideos.forEach(video => {
+                video.muted = true;
+                video.volume = 0;
+                // Force mute on play
+                video.addEventListener('play', function() {
+                    this.muted = true;
+                    this.volume = 0;
+                });
+            });
+        });
+
+        // Image Slider functionality
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.slider-nav.prev');
+        const nextBtn = document.querySelector('.slider-nav.next');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+
+            // Ensure active video is muted
+            const activeVideo = slides[currentSlide].querySelector('video');
+            if (activeVideo) {
+                activeVideo.muted = true;
+                activeVideo.volume = 0;
+            }
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            showSlide(currentSlide);
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(slideInterval);
+        }
+
+        // Event listeners for slider
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                stopAutoSlide();
+                nextSlide();
+                startAutoSlide();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                stopAutoSlide();
+                prevSlide();
+                startAutoSlide();
+            });
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                stopAutoSlide();
+                currentSlide = index;
+                showSlide(currentSlide);
+                startAutoSlide();
+            });
+        });
+
+        // Start auto slide
+        startAutoSlide();
+
+        // Pause on hover
+        const slider = document.querySelector('.image-slider');
+        if (slider) {
+            slider.addEventListener('mouseenter', stopAutoSlide);
+            slider.addEventListener('mouseleave', startAutoSlide);
+        }
+
+        // Override initial load to filter by category
+        document.addEventListener('DOMContentLoaded', async () => {
+            await checkAuthentication();
+            await loadProducts({ category: CATEGORY_FILTER });
+            setupEventListeners();
+        });
+    </script>
+    <script src="assets/js/mobile-nav.js"></script>
+    <script src="assets/js/user-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DeediX Technologies - Premier IT Services Company providing Managed IT Services, Cloud Solutions, Cybersecurity, and Technical Training in Nigeria and UK">
+    <meta name="keywords" content="IT Services, Cloud Solutions, Cybersecurity, Managed IT, Technical Training, Nigeria, UK, IT Consulting">
+    <meta name="author" content="Davison Isesele">
+
+    <title>DeediX Technologies | Premier IT Services & Solutions</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/main-site/img/favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0078d4">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/main-site/css/modern-style.css">
+    <link rel="stylesheet" href="assets/main-site/css/animations.css">
+    <link rel="stylesheet" href="assets/main-site/css/index.css">
+    <link rel="stylesheet" href="assets/main-site/css/pages.css">
+    <link rel="stylesheet" href="assets/main-site/css/chatbot.css">
+</head>
+<body class="home-page">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-text">
+                <span class="logo-brand">DEEDIX</span>
+                <span class="logo-tagline">TECHNOLOGIES</span>
+            </a>
+
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="people.html" class="nav-link">Our People</a></li>
+                <li><a href="service.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="trainings.html" class="nav-link">Trainings</a></li>
+                <li><a href="shop/index.html" class="nav-link">Shop</a></li>
+                <li><a href="contact.html" class="nav-link btn-primary">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Transforming</span> Businesses Through
+                        <span class="highlight">Innovative IT Solutions</span>
+                    </h1>
+                    <p class="hero-description">
+                        Empowering businesses with cutting-edge technology solutions. From managed IT services to cybersecurity,
+                        we deliver customized solutions that drive growth and efficiency.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Get Started Today</a>
+                        <a href="service.html" class="btn btn-secondary btn-lg">Explore Services</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="100">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Years of Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/main-site/img/slider-img.jpg" alt="Managed IT Services" class="hero-image active" loading="eager">
+                        <img src="assets/main-site/img/slider-cloud.jpg" alt="Cloud Solutions" class="hero-image" loading="lazy">
+                        <img src="assets/main-site/img/slider-cyber.png" alt="Cybersecurity Protection" class="hero-image" loading="lazy">
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="fas fa-lock" aria-hidden="true"></i>
+                        <span>Secure</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
+                        <span>Fast</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-cloud" aria-hidden="true"></i>
+                        <span>Cloud-Powered</span>
+                    </div>
+                    <div class="floating-card card-4">
+                        <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                        <span>Scalable</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to Explore</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What We Offer <i class="fa fa-briefcase"></i> </h2>
+                <p class="section-subtitle">Comprehensive IT solutions tailored to your business needs</p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="service-title">Managed IT Services</h3>
+                    <p class="service-description">
+                        Keep your operations running smoothly with our proactive support and maintenance,
+                        ensuring maximum uptime and efficiency.
+                    </p>
+                    <a href="service.html" class="service-link">Learn More →</a>
+                </article>
+
+                <article class="service-card">
+                    <div class="featured-badge">Trending</div>
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="service-title">Cloud Solutions</h3>
+                    <p class="service-description">
+                        Enhance your business agility and scalability with our secure and reliable cloud services,
+                        including migration, management, and optimization.
+                    </p>
+                    <a href="service.html" class="service-link">Learn More →</a>
+                </article>
+
+                <article class="service-card">
+                    <div class="featured-badge">Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="service-title">Cybersecurity</h3>
+                    <p class="service-description">
+                        Protect your critical data and systems with our advanced security measures,
+                        threat detection, and incident response services.
+                    </p>
+                    <a href="service.html" class="service-link">Learn More →</a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="service-title">IT Consulting</h3>
+                    <p class="service-description">
+                        Leverage our expertise to drive your digital transformation initiatives,
+                        optimize your IT infrastructure, and implement innovative technologies.
+                    </p>
+                    <a href="service.html" class="service-link">Learn More →</a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="service-title">Technical Trainings</h3>
+                    <p class="service-description">
+                        Equip yourself and your IT team with the latest technical skills and certifications
+                        covering networking, cloud computing, cybersecurity, and more.
+                    </p>
+                    <a href="trainings.html" class="service-link">Learn More →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Partners Section -->
+    <section class="technology-partners" id="tech-partners">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technology Partners <i class="fa fa-handshake" aria-hidden="true"></i></h2>
+                <p class="section-subtitle">Powered by industry-leading platforms and solutions</p>
+            </div>
+
+            <div class="partners-content">
+                <!-- Left: Compact Logo Bubbles -->
+                <div class="partners-bubbles">
+                    <div class="partners-grid">
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/aws.svg" alt="AWS">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/azure.svg" alt="Microsoft Azure">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/google-cloud.svg" alt="Google Cloud">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/oracle.svg" alt="Oracle">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/sap.svg" alt="SAP">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/adobe.svg" alt="Adobe">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/cisco.svg" alt="Cisco">
+                        </div>
+                        <div class="partner-bubble">
+                            <img src="assets/main-site/img/tech-logos/comptia.svg" alt="Comptia">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Description -->
+                <div class="partners-text">
+                    <h3 class="partners-heading">Certified Expertise Across Leading Platforms</h3>
+                    <p class="partners-description">
+                        We leverage world-class technology platforms to deliver enterprise-grade solutions.
+                        Our team holds certifications and partnerships with industry leaders including cloud providers,
+                        enterprise software platforms, and cutting-edge development tools.
+                    </p>
+                    <div class="partners-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-cloud" aria-hidden="true"></i>
+                            <span>Multi-Cloud Expertise</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-certificate" aria-hidden="true"></i>
+                            <span>Certified Professionals</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-cogs" aria-hidden="true"></i>
+                            <span>Enterprise Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section - Infinite Logo Slider -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Esteemed Clients <i class="fa fa-user-tie"></i> </h2>
+                <p class="section-subtitle">We partner with amazing businesses to deliver exceptional results</p>
+            </div>
+
+            <div class="client-logos-slider">
+                <div class="slider-track">
+                    <!-- First set of logos -->
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-nicotawines.png" alt="NicotaWines logo" loading="lazy">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-gradnext.jpg" alt="GradNext logo" loading="lazy">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-enest.jfif" alt="E-nest logo" loading="lazy">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-poshlite.jfif" alt="Poshlite logo" loading="lazy">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-ebest.jpg" alt="Ebest logo" loading="lazy">
+                    </div>
+
+                    <!-- Duplicate set for seamless infinite loop -->
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-nicotawines.png" alt="NicotaWines logo" loading="lazy">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-gradnext.jpg" alt="GradNext logo" loading="lazy">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-enest.jfif" alt="E-nest logo" loading="lazy">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-poshlite.jfif" alt="Poshlite logo" loading="lazy">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="assets/main-site/img/clients/logo-ebest.jpg" alt="Ebest logo" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-layout">
+                <!-- Left: Title with fancy line -->
+                <div class="testimonials-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-quote-left"></i>
+                        Happy Clients
+                        <i class="fas fa-quote-right"></i>
+                    </h2>
+                    <div class="fancy-line"></div>
+                    <p class="testimonials-subtitle">We place our clients first</p> <br>
+                    <div class="c-f">
+                        <div class="cta-icon-circle"><i class="fas fa-smile"></i></div>
+                        <div class="cta-icon-circle"><i class="fas fa-users-cog"></i></div>
+                    </div>
+                </div>
+
+                <!-- Right: Slider -->
+                <div class="testimonials-slider-wrapper">
+                    <div class="testimonials-slider">
+                        <div class="testimonial-track">
+                            <article class="testimonial-card active">
+                                <div class="quote-icon">“</div>
+                                <p class="testimonial-text">
+                                    You designed a system that has streamlined our process, we will continue to partner
+                                </p>
+                                <div class="testimonial-author">
+                                    <img src="assets/main-site/img/testimonials/ebest.jpg" alt="Emmanuel Unuabor" class="author-image" loading="lazy">
+                                    <div class="author-info">
+                                        <h4 class="author-name">Emmanuel Unuabor</h4>
+                                        <p class="author-role">CEO, Ebest Furnitures & Interiors</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="testimonial-card">
+                                <div class="quote-icon">“</div>
+                                <p class="testimonial-text">
+                                    We called and DeediX Technologies answered. Thank you for revamping our network infrastructure
+                                </p>
+                                <div class="testimonial-author">
+                                    <img src="assets/main-site/img/testimonials/posh.jfif" alt="Christopher Okukpon" class="author-image" loading="lazy">
+                                    <div class="author-info">
+                                        <h4 class="author-name">Christopher Okukpon</h4>
+                                        <p class="author-role">CEO / MD, Poshlite Construction</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="testimonial-card">
+                                <div class="quote-icon">“</div>
+                                <p class="testimonial-text">
+                                    We searched for a better way to receive payments from clients, and Deedix Technologies
+                                    delivered by integrating a seamless payment solution. This system has been serving us exceptionally well.
+                                </p>
+                                <div class="testimonial-author">
+                                    <img src="assets/main-site/img/testimonials/gradnextlogo.jpg" alt="Dr Peter O" class="author-image" loading="lazy">
+                                    <div class="author-info">
+                                        <h4 class="author-name">Dr Peter O</h4>
+                                        <p class="author-role">Founder, GradNext</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="testimonial-controls">
+                            <button type="button" class="testimonial-btn prev" aria-label="Previous testimonial">←</button>
+                            <div class="testimonial-dots"></div>
+                            <button type="button" class="testimonial-btn next" aria-label="Next testimonial">→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- CTA Banner -->
+            <div class="">
+                <div class="container">
+                    <div class="cta-content">
+                        <div class="cta-text">
+                            <h2 class="section-title">Ready to Transform Your Business?</h2>
+                            <p class="cta-description">
+                                Partner with us to deliver innovative technology solutions that drive growth and efficiency
+                            </p>
+                        </div>
+                        <div class="cta-visual">
+                            <div class="cta-icon-circle">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>
+                        <div class="cta-actions">
+                            <a href="contact.html" class="btn btn-primary btn-lg">
+                                Get Started
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">About Us</h3>
+                    <p class="footer-text">
+                        At DeediX Technologies, we are more than just an IT service provider —
+                        we are your strategic partner in navigating the complexities of the digital world.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/deedixtech" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/deedixtech" class="social-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/deedixtech" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/deedixtech" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="service.html">Managed IT Services</a></li>
+                        <li><a href="service.html">Cloud Solutions</a></li>
+                        <li><a href="service.html">Cybersecurity</a></li>
+                        <li><a href="service.html">IT Consultation</a></li>
+                        <li><a href="trainings.html">Technical Trainings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="people.html">Our People</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog & Insights</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <!--<li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="terms-condition.html">Terms & Conditions</a></li>-->
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:info@deedixtech.com">info@deedixtech.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <a href="tel:+2348074387880">+234 807 438 7880</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <a href="tel:+447849417587">+44 7849 417 587</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <span>Edo State, Nigeria & London, UK</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> DeediX Technologies. All rights reserved. Built with passion and precision.</p>
+
+                <div class="footer-legal-links">
+                    <a href="terms-condition.html">Terms & Conditions</a> |
+                    <a href="privacy.html">Privacy Policy</a> |
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- AI Chatbot Widget -->
+    <button type="button" class="chat-button" id="chatButton" aria-label="Open chat">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-header-info">
+                <h3 class="chat-header-title">DeediX Assistant</h3>
+                <p class="chat-header-status">
+                    <span class="status-dot"></span>
+                    Online
+                </p>
+            </div>
+            <button type="button" class="chat-close-btn" id="chatCloseBtn" aria-label="Close chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="message-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="typing-dots">
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text"
+                   class="chat-input"
+                   id="chatInput"
+                   placeholder="Type your message..."
+                   autocomplete="off">
+            <button type="button" class="chat-send-btn" id="sendButton" disabled aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348074387880?text=Hi%20DeediX%20Technologies!%20I'm%20interested%20in%20your%20IT%20services."
+           class="whatsapp-bubble" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <div class="whatsapp-status"></div>
+        </a>
+        <div class="whatsapp-tooltip">
+            <strong>Chat with Us</strong><br>
+            Quick response on WhatsApp
+        </div>
+    </div>
+     -->
+    
+    <!-- Inline Year Script + Main JS -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Counter Animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+
+        // Intersection Observer for counter animation
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-count'));
+                        animateCounter(counter, target);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe the hero stats section
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            observer.observe(heroStats);
+        }
+    </script>
+    <script src="assets/main-site/js/modern-main.js"></script>
+    <script src="assets/main-site/js/chatbot.js"></script>
+</body>
+</html>
